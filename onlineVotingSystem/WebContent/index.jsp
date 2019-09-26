@@ -156,7 +156,7 @@
 				          </div>
 				        </div>
 			        </div>
-							<div class="ftco-search my-md-5">
+							<!-- <div class="ftco-search my-md-5">
 								<div class="row">
 			            <div class="col-md-12 nav-link-wrap">
 				            <div class="nav nav-pills text-center" id="v-pills-tab" role="tablist" aria-orientation="vertical">
@@ -266,7 +266,7 @@
 				            </div>
 				          </div>
 				        </div>
-			        </div>
+			        </div> -->
 	          </div>
 	        </div>
 	    	</div>
