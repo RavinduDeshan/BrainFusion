@@ -1,0 +1,83 @@
+body{
+    font-family: Verdana, sans-serif;
+    background: url(../img/New-York-Wallpaper-Background-26.jpg);
+    background-repeat: space;
+    background-position: center;
+}
+/*.container1{
+    background: rgba(205,215,195,0.4);
+    margin-left:  25px;
+    margin-right:  25px;
+}*/
+.container2{
+    background: rgba(205,215,195,0.7);
+    padding-left: 10%;
+    padding-right: 10%;
+    padding-bottom: 5%;
+}
+.btn{
+    border-radius: 15px;
+    width: 10vw;
+    height: 5vh;
+}
+.subBtn{
+    background: aquamarine;
+    font-weight: bold;
+}
+.reg{
+    border-radius: 15px;
+    padding: 15px;
+    background: darkgreen;
+    color: white;
+}
+.remBtn{
+    background: darkorange;
+    font-weight: bold;
+}
+.editBtn{
+    background: chartreuse;
+    font-weight: bold;
+}
+.textBox{
+    border-radius: 15px;
+    padding: 10px;
+}
+table{
+    border-radius: 15px;
+    border-spacing: 5px;
+    text-align: center;
+}
+table td{
+    padding: 5px;
+}
+table th{
+    background: yellowgreen;
+}
+.backOver{
+    border-radius: 15px;
+    padding: 15px;
+    background: yellowgreen;
+    width: 100%;
+    font-weight: bold;
+}
+.clrBtn{
+    background: orangered;
+    color: white;
+    font-weight: bold;
+}
+.container3{
+    background: rgba(205,215,195,0.7);
+    padding: 10px;
+    padding-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-radius: 15px;
+    font-weight: bolder;
+}
+.container6{
+    margin-left: 10%;
+    margin-right: 10%;
+    background: rgba(205,215,195,0.7);
+    border-radius: 15px;
+    
+}
