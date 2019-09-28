@@ -372,6 +372,11 @@
         </div>
       </div>
     </section>
+    
+        <section >
+
+			<img src="HomeAssets/images/getStarted1.png" style="width:100%; heigth: auto;">
+    </section>
 
     <section class="ftco-section">
     	<div class="container">
