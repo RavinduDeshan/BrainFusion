@@ -90,7 +90,7 @@
 	          
 	          
 	          %>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta mr-md-1"><a href="<%=link %>" class="nav-link" style="display:<%=visi %>;">Post a Job</a></li>
 			  <li class="nav-item cta cta-colored"><a href="browseJobs.jsp" class="nav-link" style="display:<%=visij %>;">Want a Job</a></li>
 			  <li class="nav-item cta mr-md-2" style="margin-left: 4px;"><a href="LoginWelcome.jsp" class="nav-link" style="display:<%=visil %>;">Login</a></li>
@@ -373,17 +373,66 @@
       </div>
     </section>
     
-        <section >
-
-			<img src="HomeAssets/images/getStarted1.png" style="width:100%; heigth: auto;">
-    </section>
+       
 
     <section class="ftco-section">
     	<div class="container">
     		<div class="row justify-content-center mb-5">
           <div class="col-md-7 heading-section text-center ftco-animate">
+          	<span class="subheading">Trending Skills</span>
+            <h2 class="mb-0">Top Skills</h2>
+          </div>
+        </div>
+        <div class="row">
+        	<div class="col-md-3 ftco-animate">
+        		<ul class="category text-center">
+        			<li><a href="#">HTML <br><span class="number">354</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">Java <br><span class="number">143</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">Java Scripts<br><span class="number">1100</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			
+        		</ul>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<ul class="category text-center">
+        			<li><a href="#">MySQL<br><span class="number">100</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">Android<br><span class="number">200</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">MongoDB<br><span class="number">300</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			
+        		</ul>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<ul class="category text-center">
+        			<li><a href="#">PHP<br><span class="number">400</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">CSS<br><span class="number">100</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">C<br><span class="number">222</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			
+        		</ul>
+        	</div>
+        	<div class="col-md-3 ftco-animate">
+        		<ul class="category text-center">
+        			<li><a href="#">Spring Boot<br><span class="number">150</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">Angular<br><span class="number">90</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        			<li><a href="#">C++<br><span class="number">123</span> <span>Follows</span><i class="ion-ios-arrow-forward"></i></a></li>
+        		
+        		</ul>
+        	</div>
+        </div>
+    	</div>
+    </section>
+    
+     <section >
+
+			<img src="HomeAssets/images/getStarted1.png" style="width:100%; heigth: auto;">
+    </section>
+
+    
+    
+    <section class="ftco-section" style="margin-top:-15%;">
+    	<div class="container">
+    		<div class="row justify-content-center mb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
           	<span class="subheading">Job Categories</span>
-            <h2 class="mb-0">Top Categories</h2>
+            <h2 class="mb-0">Top Jobs</h2>
           </div>
         </div>
         <div class="row">
@@ -421,49 +470,6 @@
         	</div>
         </div>
     	</div>
-    </section>
-
-    <section class="ftco-section services-section">
-      <div class="container">
-        <div class="row d-flex">
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-resume"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Search Millions of Jobs</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-team"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Easy To Manage Jobs</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>    
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-career"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Top Careers</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
-            <div class="media block-6 services d-block">
-              <div class="icon"><span class="flaticon-employees"></span></div>
-              <div class="media-body">
-                <h3 class="heading mb-3">Search Expert Candidates</h3>
-                <p>A small river named Duden flows by their place and supplies.</p>
-              </div>
-            </div>      
-          </div>
-        </div>
-      </div>
     </section>
 
 		<section class="ftco-section bg-light">
@@ -531,36 +537,36 @@
 		        </div>
 		        <div class="sidebar-box ftco-animate">
 		        	<div class="">
-			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/company-1.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/WSO2.png" class="img-fluid" alt="Colorlib Free Template"></a>
 			        	<div class="text p-3">
-			        		<h3><a href="#">Company Company</a></h3>
+			        		<h3><a href="#">WSO2</a></h3>
 			        		<p><span class="number">500</span> <span>Open position</span></p>
 			        	</div>
 		        	</div>
 		        </div>
 		        <div class="sidebar-box ftco-animate">
 		        	<div class="">
-			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/company-2.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/99x.png" class="img-fluid" alt="Colorlib Free Template"></a>
 			        	<div class="text p-3">
-			        		<h3><a href="#">Facebook Company</a></h3>
+			        		<h3><a href="#">99x Technologies</a></h3>
 			        		<p><span class="number">700</span> <span>Open position</span></p>
 			        	</div>
 			        </div>
 		        </div>
 		        <div class="sidebar-box ftco-animate">
 		        	<div class="">
-			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/company-3.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/codegen.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
 			        	<div class="text p-3">
-			        		<h3><a href="#">IT Programming INC</a></h3>
+			        		<h3><a href="#">CodeGen</a></h3>
 			        		<p><span class="number">700</span> <span>Open position</span></p>
 			        	</div>
 			        </div>
 		        </div>
 		        <div class="sidebar-box ftco-animate">
 		        	<div class="">
-			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/company-4.jpg" class="img-fluid" alt="Colorlib Free Template"></a>
+			        	<a href="#" class="company-wrap"><img src="HomeAssets/images/dialog.png" class="img-fluid" alt="Colorlib Free Template"></a>
 			        	<div class="text p-3">
-			        		<h3><a href="#">IT Programming INC</a></h3>
+			        		<h3><a href="#">Dialog Axiata</a></h3>
 			        		<p><span class="number">700</span> <span>Open position</span></p>
 			        	</div>
 			        </div>
@@ -569,6 +575,8 @@
 				</div>
 			</div>
 		</section>
+		
+		
 
 
 
@@ -577,7 +585,7 @@
         <div class="row justify-content-center mb-4">
           <div class="col-md-7 text-center heading-section ftco-animate">
           	<span class="subheading">Testimonial</span>
-            <h2 class="mb-4">Happy Clients</h2>
+            <h2 class="mb-4">Happy Employees</h2>
           </div>
         </div>
         <div class="row ftco-animate">
@@ -586,12 +594,12 @@
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="mb-4">Career Master is my life Savior. It Changed my life 360 degrees. Thans Career Master</p>
                     <div class="d-flex align-items-center">
                     	<div class="user-img" style="background-image: url(HomeAssets/images/person_1.jpg)"></div>
                     	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
+		                    <p class="name">Nuwan Perera</p>
+		                    <span class="position">Full Stack Developer</span>
 		                  </div>
 	                  </div>
                   </div>
@@ -600,12 +608,12 @@
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="mb-4">This is the coolest platform to Analyze new Technology Trends.Awsome</p>
                     <div class="d-flex align-items-center">
                     	<div class="user-img" style="background-image: url(HomeAssets/images/person_2.jpg)"></div>
                     	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
+		                    <p class="name">Idunil Perera</p>
+		                    <span class="position">Business Analyst</span>
 		                  </div>
 	                  </div>
                   </div>
@@ -614,12 +622,12 @@
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="mb-4">Love this platform. It Helped me a lot to solve Avenger level problems easily with experts</p>
                     <div class="d-flex align-items-center">
                     	<div class="user-img" style="background-image: url(HomeAssets/images/person_3.jpg)"></div>
                     	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
+		                    <p class="name">Rishi Mahelath</p>
+		                    <span class="position">Software Engineer</span>
 		                  </div>
 	                  </div>
                   </div>
@@ -628,11 +636,11 @@
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="mb-4">Career Master helps a lot to choose the best platform for my new projects</p>
                     <div class="d-flex align-items-center">
                     	<div class="user-img" style="background-image: url(HomeAssets/images/person_1.jpg)"></div>
                     	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
+		                    <p class="name">Developer</p>
 		                    <span class="position">Marketing Manager</span>
 		                  </div>
 	                  </div>
@@ -642,12 +650,12 @@
               <div class="item">
                 <div class="testimony-wrap py-4">
                   <div class="text">
-                    <p class="mb-4">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+                    <p class="mb-4">Simple UI. Lots of Usages. I recommend this platform for any career seeker</p>
                     <div class="d-flex align-items-center">
                     	<div class="user-img" style="background-image: url(HomeAssets/images/person_2.jpg)"></div>
                     	<div class="pl-3">
-		                    <p class="name">Roger Scott</p>
-		                    <span class="position">Marketing Manager</span>
+		                    <p class="name">Jerald Silva</p>
+		                    <span class="position">Front End Developer</span>
 		                  </div>
 	                  </div>
                   </div>
@@ -658,13 +666,18 @@
         </div>
       </div>
     </section>
+    
+     <section >
+
+			<img src="HomeAssets/images/getStarted2.png" style="width:100%; heigth: auto;">
+    </section>
 
     <section class="ftco-section ftco-candidates bg-primary">
     	<div class="container">
     		<div class="row justify-content-center pb-3">
           <div class="col-md-10 heading-section heading-section-white text-center ftco-animate">
-          	<span class="subheading">Candidates</span>
-            <h2 class="mb-4">Latest Candidates</h2>
+          	<span class="subheading">Experts</span>
+            <h2 class="mb-4">Top Experts</h2>
           </div>
         </div>
     	</div>
@@ -675,43 +688,43 @@
         			<div class="item">
 		        		<a href="#" class="team text-center">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_1.jpg);"></div>
-		        			<h2>Danica Lewis</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<h2>Dr Anil Perera</h2>
+		        			<span class="position">AI Expert</span>
 		        		</a>
         			</div>
         			<div class="item">
 	        			<a href="#" class="team text-center">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_2.jpg);"></div>
-		        			<h2>Nicole Simon</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<h2>Prof Pujith Silva</h2>
+		        			<span class="position">Financial Expert</span>
 		        		</a>
 	        		</div>
 	        		<div class="item">
 	        			<a href="#" class="team text-center">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_3.jpg);"></div>
-		        			<h2>Cloe Meyer</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<h2>Dr Nimal Thilakasiri</h2>
+		        			<span class="position">BlockChain Expert</span>
 		        		</a>
 	        		</div>
 	        		<div class="item">
 	        			<a href="#" class="team text-center">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_4.jpg);"></div>
-		        			<h2>Rachel Clinton</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<h2>Dr A P Perera</h2>
+		        			<span class="position">Marketing Expert</span>
 		        		</a>
 	        		</div>
 	        		<div class="item">
 	        			<a href="#" class="team text-center">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_5.jpg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<h2>Prof Nimali Siriwardana</h2>
+		        			<span class="position">Business Expert</span>
 		        		</a>
 	        		</div>
 	        		<div class="item">
 	        			<a href="#" class="team text-center">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_6.jpg);"></div>
-		        			<h2>Dave Buff</h2>
-		        			<span class="position">Western City, UK</span>
+		        			<h2>Dr Surendra Priyamal</h2>
+		        			<span class="position">Full Stack Expert</span>
 		        		</a>
 	        		</div>
         		</div>
@@ -739,7 +752,7 @@
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">How to Be a good Team Player</a></h3>
               </div>
             </div>
           </div>
@@ -753,7 +766,7 @@
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">Key Factors effects for a Full stack Developer</a></h3>
               </div>
             </div>
           </div>
@@ -767,7 +780,7 @@
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">Will Hardware Plays a different Role in IT in near Future</a></h3>
               </div>
             </div>
           </div>
@@ -781,7 +794,7 @@
                   <div><a href="#">Admin</a></div>
                   <div><a href="#" class="meta-chat"><span class="icon-chat"></span> 3</a></div>
                 </div>
-                <h3 class="heading"><a href="#">Even the all-powerful Pointing has no control about the blind texts</a></h3>
+                <h3 class="heading"><a href="#">Trending Coding Standards for every developer</a></h3>
               </div>
             </div>
           </div>
@@ -795,7 +808,7 @@
           <div class="row d-flex justify-content-center">
             <div class="col-md-7 text-center heading-section heading-section-white ftco-animate">
               <h2>Subcribe to our Newsletter</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts. Separated they live in</p>
+              <p>Our NewsLetter provides Career Master daily updates, discounts and all valuble things to make you a better Employee </p>
               <div class="row d-flex justify-content-center mt-4 mb-4">
                 <div class="col-md-12">
                   <form action="#" class="subscribe-form">
@@ -817,8 +830,8 @@
         <div class="row mb-5">
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Career Master Jobboard</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">Career Master</h2>
+              <p>Career Master is a Platform where </p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -828,27 +841,26 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Employers</h2>
+              <h2 class="ftco-heading-2">Job Host</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="pb-1 d-block">Browse Candidates</a></li>
-                <li><a href="#" class="pb-1 d-block">Post a Job</a></li>
-                <li><a href="#" class="pb-1 d-block">Employer Listing</a></li>
-                <li><a href="#" class="pb-1 d-block">Resume Page</a></li>
-                <li><a href="#" class="pb-1 d-block">Dashboard</a></li>
-                <li><a href="#" class="pb-1 d-block">Job Packages</a></li>
+               
+                <li><a href="addJob.jsp" class="pb-1 d-block">Post a Job</a></li>
+                
+                <li><a href="JobHostDashBoard.jsp" class="pb-1 d-block">Dashboard</a></li>
+                
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Candidate</h2>
+              <h2 class="ftco-heading-2">Career Seeker</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="pb-1 d-block">Browse Jobs</a></li>
-                <li><a href="#" class="pb-1 d-block">Submit Resume</a></li>
-                <li><a href="#" class="pb-1 d-block">Dashboard</a></li>
-                <li><a href="#" class="pb-1 d-block">Browse Categories</a></li>
-                <li><a href="#" class="pb-1 d-block">My Bookmarks</a></li>
-                <li><a href="#" class="pb-1 d-block">Candidate Listing</a></li>
+                <li><a href="browseJobs.jsp" class="pb-1 d-block">Browse Jobs</a></li>
+                
+                <li><a href="UserDashBoard.jsp" class="pb-1 d-block">Dashboard</a></li>
+                
+                
+                
               </ul>
             </div>
           </div>
@@ -856,10 +868,10 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Account</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="pb-1 d-block">My Account</a></li>
-                <li><a href="#" class="pb-1 d-block">Sign In</a></li>
-                <li><a href="#" class="pb-1 d-block">Create Account</a></li>
-                <li><a href="#" class="pb-1 d-block">Checkout</a></li>
+                <li><a href="UserDashBoard.jsp" class="pb-1 d-block">My Account</a></li>
+                <li><a href="LoginWelcome.jsp" class="pb-1 d-block">Log In</a></li>
+                <li><a href="SignupWelcome.jsp" class="pb-1 d-block">Create Account</a></li>
+                
               </ul>
             </div>
           </div>
@@ -868,9 +880,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">No 23, High Level Road, Gamsaba Handiya,<br>Nugegoda, <br>Sri Lanka</span></li>
+	                <li><span class="icon icon-phone"></span><span class="text">+94 071 4009 185</span></li>
+	                <li><span class="icon icon-envelope"></span><span class="text">info@careermaster.com</span></li>
 	              </ul>
 	            </div>
             </div>
@@ -879,8 +891,8 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Career Master
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>

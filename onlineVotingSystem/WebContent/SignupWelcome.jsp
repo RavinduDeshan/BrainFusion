@@ -61,9 +61,9 @@
       <br>
       <br>
       <br>
-      <div id="extracon1" style="display: none;">Stuff shown on hover</div>
-      <div id="extracon2" style="display: none;">Stuff shown on hover2</div>
-    </div>
+      <div id="extracon1" style="display: none;">If you are a  Career Seeker Sign Up from here</div>
+      <div id="extracon2" style="display: none;">If you are a Job Host Company Sign Up from here</div>
+   </div>
     
     <br>
     <br>
@@ -76,7 +76,7 @@
   <!-- Footer -->
   <footer class="py-5 bg-black">
     <div class="container">
-      <p class="m-0 text-center text-white small">Copyright &copy; SLIIT 2019</p>
+      <p class="m-0 text-center text-white small">Copyright &copy;2019 All Rights Reserved| Career Master</p>
     </div>
     <!-- /.container -->
   </footer>

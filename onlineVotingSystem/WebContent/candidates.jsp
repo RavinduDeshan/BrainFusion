@@ -14,7 +14,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Career Master</title>
+    <title>Career Master Experts</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     
@@ -87,7 +87,7 @@
 	          
 	          
 	          %>
-	          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+	          <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
 	          <li class="nav-item cta mr-md-1"><a href="<%=link %>" class="nav-link" style="display:<%=visi %>;">Post a Job</a></li>
 			  <li class="nav-item cta cta-colored"><a href="browseJobs.jsp" class="nav-link" style="display:<%=visij %>;">Want a Job</a></li>
 			  <li class="nav-item cta mr-md-2" style="margin-left: 4px;"><a href="LoginWelcome.jsp" class="nav-link" style="display:<%=visil %>;">Login</a></li>
@@ -107,8 +107,8 @@
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
           <div class="col-md-12 ftco-animate text-center mb-5">
-          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Canditates</span></p>
-            <h1 class="mb-3 bread">Hire Your Best Candidates</h1>
+          	<p class="breadcrumbs mb-0"><span class="mr-3"><a href="index.html">Home <i class="ion-ios-arrow-forward"></i></a></span> <span>Experts</span></p>
+            <h1 class="mb-3 bread">Meet Experts</h1>
           </div>
         </div>
       </div>
@@ -123,12 +123,12 @@
 		    				<div class="team d-md-flex p-4 bg-white">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_1.jpg);"></div>
 		        			<div class="text pl-md-4">
-		        				<span class="location mb-0">Western City, UK</span>
+		        				<span class="location mb-0">University of Colombo</span>
 		        				<h2>Danica Lewis</h2>
-			        			<span class="position">Graduate</span>
-			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+			        			<span class="position">AI Expert</span>
+			        			<p class="mb-2">His Details</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
-			        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
 		        			</div>
 		        		</div>
 		    			</div>
@@ -141,7 +141,7 @@
 			        			<span class="position">Graduate</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
-			        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
 		        			</div>
 		        		</div>
 		    			</div>
@@ -154,7 +154,7 @@
 			        			<span class="position">Graduate</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
-			        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
 		        			</div>
 		        		</div>
 		    			</div>
@@ -167,7 +167,7 @@
 			        			<span class="position">Graduate</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
-			        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
 		        			</div>
 		        		</div>
 		    			</div>
@@ -180,7 +180,7 @@
 			        			<span class="position">Graduate</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
-			        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
 		        			</div>
 		        		</div>
 		    			</div>
@@ -193,7 +193,7 @@
 			        			<span class="position">Graduate</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
-			        			<p><a href="#" class="btn btn-primary">Shortlist</a></p>
+			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
 		        			</div>
 		        		</div>
 		    			</div>
@@ -295,8 +295,8 @@
         <div class="row mb-5">
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Career Master Jobboard</h2>
-              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
+              <h2 class="ftco-heading-2">Career Master</h2>
+              <p>Career Master is a Platform where </p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -306,27 +306,26 @@
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Employers</h2>
+              <h2 class="ftco-heading-2">Job Host</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="pb-1 d-block">Browse Candidates</a></li>
-                <li><a href="#" class="pb-1 d-block">Post a Job</a></li>
-                <li><a href="#" class="pb-1 d-block">Employer Listing</a></li>
-                <li><a href="#" class="pb-1 d-block">Resume Page</a></li>
-                <li><a href="#" class="pb-1 d-block">Dashboard</a></li>
-                <li><a href="#" class="pb-1 d-block">Job Packages</a></li>
+               
+                <li><a href="addJob.jsp" class="pb-1 d-block">Post a Job</a></li>
+                
+                <li><a href="JobHostDashBoard.jsp" class="pb-1 d-block">Dashboard</a></li>
+                
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Candidate</h2>
+              <h2 class="ftco-heading-2">Career Seeker</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="pb-1 d-block">Browse Jobs</a></li>
-                <li><a href="#" class="pb-1 d-block">Submit Resume</a></li>
-                <li><a href="#" class="pb-1 d-block">Dashboard</a></li>
-                <li><a href="#" class="pb-1 d-block">Browse Categories</a></li>
-                <li><a href="#" class="pb-1 d-block">My Bookmarks</a></li>
-                <li><a href="#" class="pb-1 d-block">Candidate Listing</a></li>
+                <li><a href="browseJobs.jsp" class="pb-1 d-block">Browse Jobs</a></li>
+                
+                <li><a href="UserDashBoard.jsp" class="pb-1 d-block">Dashboard</a></li>
+                
+                
+                
               </ul>
             </div>
           </div>
@@ -334,10 +333,10 @@
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Account</h2>
               <ul class="list-unstyled">
-                <li><a href="#" class="pb-1 d-block">My Account</a></li>
-                <li><a href="#" class="pb-1 d-block">Sign In</a></li>
-                <li><a href="#" class="pb-1 d-block">Create Account</a></li>
-                <li><a href="#" class="pb-1 d-block">Checkout</a></li>
+                <li><a href="UserDashBoard.jsp" class="pb-1 d-block">My Account</a></li>
+                <li><a href="LoginWelcome.jsp" class="pb-1 d-block">Log In</a></li>
+                <li><a href="SignupWelcome.jsp" class="pb-1 d-block">Create Account</a></li>
+                
               </ul>
             </div>
           </div>
@@ -346,9 +345,9 @@
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
-	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
-	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">No 23, High Level Road, Gamsaba Handiya,<br>Nugegoda, <br>Sri Lanka</span></li>
+	                <li><span class="icon icon-phone"></span><span class="text">+94 071 4009 185</span></li>
+	                <li><span class="icon icon-envelope"></span><span class="text">info@careermaster.com</span></li>
 	              </ul>
 	            </div>
             </div>
@@ -357,13 +356,14 @@
         <div class="row">
           <div class="col-md-12 text-center">
 
-            <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart text-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+            <p>
+  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Career Master
   <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
           </div>
         </div>
       </div>
     </footer>
+    
     
   
 

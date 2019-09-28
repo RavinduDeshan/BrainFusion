@@ -25,6 +25,10 @@
    
    JobHost can = canserv1.getJobHostDetails(email);
    
+   if(session.getAttribute("type") !="2") {
+	    response.sendRedirect("index.jsp");
+	}
+   
    
    %>
 <!DOCTYPE html>
