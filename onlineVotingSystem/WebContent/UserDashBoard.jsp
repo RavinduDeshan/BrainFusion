@@ -636,7 +636,7 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>An Introduction to the MEAN Stack</a>
+                                                      <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
                                                   </h2>
                                     <div class="byline">
                                       <span>Jay Raj</span> on <a>Sitepoint</a>
@@ -650,7 +650,7 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
+                                                      <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
                                                   </h2>
                                     <div class="byline">
                                       <span>Nisha Talagala</span> on <a>Forbes</a>
@@ -664,7 +664,7 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>An Introduction to the MEAN Stack</a>
+                                                      <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
                                                   </h2>
                                     <div class="byline">
                                       <span>Jay Raj</span> on <a>Sitepoint</a>
@@ -678,7 +678,7 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
+                                                      <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
                                                   </h2>
                                     <div class="byline">
                                       <span>Nisha Talagala</span> on <a>Forbes</a>
@@ -764,7 +764,7 @@
                         <div class="x_content">
                           <div class="dashboard-widget-content">
                             <div class="col-md-4 hidden-small">
-                              <h2 class="line_30">125.7k Views from 60 countries</h2>
+                              <h2 class="line_30">From almost 1000 entries</h2>
     
                               <table class="countries_list">
                                 <tbody>
