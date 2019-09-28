@@ -95,7 +95,7 @@
                     <div class="divTableCel2">
                       <div class="collapse navbar1-collapse" id="ftco-nav">
                         <ul class="navbar1-nav ml-auto">
-                          <li class="nav-item active"><a href="index.jsp" class="nav-link">Home</a></li>
+                          <li class="nav-item "><a href="index.jsp" class="nav-link">Home</a></li>
                           <li class="nav-item"><a href="browseJobs.jsp" class="nav-link">Browse Jobs</a></li>
                           <li class="nav-item"><a href="candidates.jsp" class="nav-link">Experts</a></li>
                           <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
