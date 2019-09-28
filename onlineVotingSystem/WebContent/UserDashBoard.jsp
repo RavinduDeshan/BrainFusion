@@ -632,7 +632,7 @@
               <div class="col-md-12">
                   <div class="x_panel">
                       <div class="x_title">
-                          <h2>Latest videos</h2>
+                          <h2>Trending Courses</h2>
                           <div class="clearfix"></div>
                       </div>
                       <div class="row" style="overflow-x: hidden;display: flex;overflow-y: auto;align-items:center;width: 100%;max-height: 332px;">
