@@ -1,5 +1,5 @@
 
-<%@page import="com.onvs.service.ElectionService"%>
+
 <%@ page import="com.onvs.util.DBConnection"%>
 <%@ page import ="java.sql.Connection"%>
     
