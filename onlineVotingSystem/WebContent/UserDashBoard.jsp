@@ -88,6 +88,7 @@
       -webkit-transform: translate(-50%, 0);
       transform: translate(-50%, 0);
     }
+
     .chartjs-tooltip-key {
       display: inline-block;
       width: 10px;
@@ -147,9 +148,12 @@
 		<%  String nic=(String) session.getAttribute( "Admin" ); 
 		Connection cons;
 		cons= DBConnection.getConnection();
+
 		UserServiceImpl canserv1=new UserServiceImpl();
 		   
 		 User can = canserv1.getUserDetails(nic);
+
+
 		JobServiceImpl canserv2=new JobServiceImpl();
 		   
 		int wso2= canserv2.getJobCount("WSO2@WSO2.com");
@@ -832,6 +836,7 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
+
                   <div class="widget_summary">
                     <div class="w_left w_25">
                       <span>0.1.5.3</span>
@@ -896,9 +901,11 @@
                     </div>
                     <div class="clearfix"></div>
                   </div>
+
                 </div>
               </div>
             </div>
+
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="x_panel tile fixed_height_320 overflow_hidden">
                 <div class="x_title">
@@ -978,6 +985,8 @@
                 </div>
               </div>
             </div>
+
+
             <div class="col-md-4 col-sm-4 col-xs-12">
               <div class="x_panel tile fixed_height_320">
                 <div class="x_title">
@@ -1015,6 +1024,7 @@
                       <li><i class="fa fa-area-chart"></i><a href="#">Logout</a>
                       </li>
                     </ul>
+
                     <div class="sidebar-widget">
                         <h4>Profile Completion</h4>
                         <canvas width="150" height="80" id="chart_gauge_01" class="" style="width: 160px; height: 100px;"></canvas>
@@ -1028,6 +1038,7 @@
                 </div>
               </div>
             </div>
+
           </div-->
 
 
@@ -1055,6 +1066,7 @@
                       <div class="clearfix"></div>
                     </div>
                     <div class="x_content">
+
                       <div class="">
                         <ul class="to_do">
                           <li>
@@ -1134,7 +1146,9 @@
                           <h3 class="degrees">23</h3>
                         </div>
                       </div>
+
                       <div class="clearfix"></div>
+
                       <div class="row weather-days">
                         <div class="col-sm-2">
                           <div class="daily-weather">
@@ -1188,6 +1202,7 @@
                       </div>
                     </div>
                   </div>
+
                 </div>
                 <!-- end of weather widget -->
               </div>
