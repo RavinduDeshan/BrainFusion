@@ -44,7 +44,7 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container-fluid px-md-4	">
-	      <a class="navbar-brand" href="index.jsp"><img src="HomeAssets/images/Career Master.png" height="56px">Career Master</a>
+	      <a class="navbar-brand" href="index.jsp"><img src="HomeAssets/images/Career Master Vert.png" height="56px"></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
@@ -111,8 +111,9 @@
       	<div class="row d-md-flex no-gutters slider-text align-items-center justify-content-center">
 	        <div class="col-md-10 d-flex align-items-center ftco-animate">
 	        	<div class="text text-center pt-5 mt-md-5">
-	        		<p class="mb-4">Find Job, Employment, and Career Opportunities</p>
-	            <h1 class="mb-5">The Eassiest Way to Get Your New Job</h1>
+	        	<img src="HomeAssets/images/Career Master Vert.png" style="heigth:auto; width:55%;">
+	        		<p class="mb-4">Your Path To A Successful Career Begins Here</p>
+	            <h1 class="mb-5">The Best Way to Keep Your Skills <br><b>Up to Date</b></h1>
 							<div class="ftco-counter ftco-no-pt ftco-no-pb">
 			        	<div class="row">
 				          <div class="col-md-4 d-flex justify-content-center counter-wrap ftco-animate">
@@ -273,59 +274,103 @@
       </div>
     </div>
 
-    <section class="ftco-section ftco-no-pt ftco-no-pb">
-    	<div class="container">
-    		<div class="row">
-    			<div class="col-md-12">
+    <section class="ftco-section ftco-no-pt ftco-no-pb" >
+    	<div class="container" >
+    		<div class="row" >
+    			<div class="col-md-12" >
     				<div class="category-wrap">
-    					<div class="row no-gutters">
+    					<div class="row no-gutters" >
     						<div class="col-md-2">
     							<div class="top-category text-center no-border-left">
-    								<h3><a href="#">Website &amp; Software</a></h3>
+    								<h3><a href="#">Skills in <br>Demand</a></h3>
     								<span class="icon flaticon-contact"></span>
-    								<p><span class="number">143</span> <span>Open position</span></p>
+    								<p><span class="number">2002</span> <span>Vacancies</span></p>
     							</div>
     						</div>
     						<div class="col-md-2">
     							<div class="top-category text-center active">
-    								<h3><a href="#">Education &amp; Training</a></h3>
+    								<h3><a href="#">Professional Skills Development </a></h3>
     								<span class="icon flaticon-mortarboard"></span>
-    								<p><span class="number">143</span> <span>Open position</span></p>
+    								<p><span class="number"></span> <span></span></p>
     							</div>
     						</div>
     						<div class="col-md-2">
     							<div class="top-category text-center">
-    								<h3><a href="#">Graphic &amp; UI/UX Design</a></h3>
+    								<h3><a href="#">Meet Industry Experts</a></h3>
     								<span class="icon flaticon-idea"></span>
-    								<p><span class="number">143</span> <span>Open position</span></p>
+    								<p><span class="number">1043</span> <span>Experts</span></p>
     							</div>
     						</div>
     						<div class="col-md-2">
     							<div class="top-category text-center">
-    								<h3><a href="#">Accounting &amp; Finance</a></h3>
-    								<span class="icon flaticon-accounting"></span>
-    								<p><span class="number">143</span> <span>Open position</span></p>
+    								<h3><a href="#">Technology Trends Analysis</a></h3>
+    								<span class="icon flaticon-contact"></span>
+    								<p><span class="number"></span><br> <span> </span></p>
     							</div>
     						</div>
     						<div class="col-md-2">
     							<div class="top-category text-center">
-    								<h3><a href="#">Restaurant &amp; Food</a></h3>
-    								<span class="icon flaticon-dish"></span>
-    								<p><span class="number">143</span> <span>Open position</span></p>
+    								<h3><a href="#">Recruiement <br> Analysis</a></h3>
+    								<span class="icon flaticon-contact"></span>
+    								<p><span class="number"></span><br> <span> </span></p>
     							</div>
     						</div>
     						<div class="col-md-2">
     							<div class="top-category text-center">
-    								<h3><a href="#">Health &amp; Hospital</a></h3>
-    								<span class="icon flaticon-stethoscope"></span>
-    								<p><span class="number">143</span> <span>Open position</span></p>
+    								<h3><a href="#">Apply For <br>Jobs</a></h3>
+    								<span class="icon flaticon-resume"></span>
+    								<p><span class="number"></span><br> <span> </span></p>
     							</div>
     						</div>
+    					
     					</div>
     				</div>
     			</div>
     		</div>
     	</div>
+    </section><br><br>
+    
+    <section class="ftco-section services-section">
+      <div class="container">
+        <div class="row d-flex">
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-resume"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Hunt Skills</h3>
+                <p>We guide you with you the best skills for field You are Interested In. You can easily monitor the trends of the technologies that you are interested through Career Master.</p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-team"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Career Aid</h3>
+                <p>Career Master is the best platform to improve your professional skills. We support you with our professionals to smooth your career Experience with daily Career Aid updates.</p>
+              </div>
+            </div>    
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-career"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Dream Career</h3>
+                <p>Don't know how to choos the best career for you? Don't worry we got your back. Our Professionals will help you to find out the best career which suitable for you. </p>
+              </div>
+            </div>      
+          </div>
+          <div class="col-md-3 d-flex align-self-stretch ftco-animate">
+            <div class="media block-6 services d-block">
+              <div class="icon"><span class="flaticon-employees"></span></div>
+              <div class="media-body">
+                <h3 class="heading mb-3">Meet Expert </h3>
+                <p>Career Master is a platform which connects you with the best Experts in different skills and technologies, who are capable to guide and help you to solve your problems.</p>
+              </div>
+            </div>      
+          </div>
+        </div>
+      </div>
     </section>
 
     <section class="ftco-section">

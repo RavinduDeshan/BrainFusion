@@ -86,7 +86,7 @@
               <div class="divTable blueTable">
                   <div class="divTableBody">
                   <div class="divTableRow">
-                  <div class="divTableCell"><a class="navbar-brand" href="index.jsp"><img src="HomeAssets/images/Career Master.png" height="56px">Career Master</a>
+                  <div class="divTableCell"><a class="navbar-brand" href="index.jsp"><img src="HomeAssets/images/Career Master Vert.png" height="56px"></a>
                     <button class="navbar1-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="oi oi-menu"></span> Menu
                     </button>
@@ -712,7 +712,7 @@
                         <h2>Top Comanies Hiring Now</h2>
                         <div class="clearfix"></div>
                       </div>
-                      <h5><img src="HomeAssets/images/wso2.png" height="26px" width="60px"></h5>
+                      <h5><img src="HomeAssets/images/WSO2.png" height="26px" width="60px"></h5>
                       <div class="progress">
                         <div class="progress-bar progress-bar-warning" data-transitiongoal="<%=w%>"><font size="3px"><%=w%>%</font></div>
                       </div>
