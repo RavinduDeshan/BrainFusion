@@ -86,7 +86,7 @@
               <div class="divTable blueTable">
                   <div class="divTableBody">
                   <div class="divTableRow">
-                  <div class="divTableCell"><a class="navbar1-brand" href="index.html">Career Master</a>
+                  <div class="divTableCell"><a class="navbar-brand" href="index.jsp"><img src="HomeAssets/images/Career Master.png" height="56px">Career Master</a>
                     <button class="navbar1-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="oi oi-menu"></span> Menu
                     </button>
@@ -97,9 +97,9 @@
                         <ul class="navbar1-nav ml-auto">
                           <li class="nav-item active"><a href="index.jsp" class="nav-link">Home</a></li>
                           <li class="nav-item"><a href="browseJobs.jsp" class="nav-link">Browse Jobs</a></li>
-                          <li class="nav-item"><a href="candidates.html" class="nav-link">Experts</a></li>
-                          <li class="nav-item"><a href="blog.html" class="nav-link">Blog</a></li>
-                          <li class="nav-item"><a href="contact.html" class="nav-link">Contact</a></li>
+                          <li class="nav-item"><a href="candidates.jsp" class="nav-link">Experts</a></li>
+                          <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
+                          <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
                           
                           
               
@@ -121,7 +121,7 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <!--div class="navbar nav_title" style="border: 0;">
-              <a href="index.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="index.jsp" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
             </div-->
 
             <div class="clearfix"></div>
@@ -179,22 +179,22 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="dashboard.html"><i class="fa fa-home"></i> Home <!--span class="fa fa-chevron-down"></span--></a>
+                  <li><a href="dashboard.jsp"><i class="fa fa-home"></i> Home <!--span class="fa fa-chevron-down"></span--></a>
                     <!--ul class="nav child_menu">
-                      <li><a href="index.html">Dashboard</a></li>
-                      <li><a href="index2.html">Dashboard2</a></li>
-                      <li><a href="index3.html">Dashboard3</a></li>
+                      <li><a href="index.jsp">Dashboard</a></li>
+                      <li><a href="index2.jsp">Dashboard2</a></li>
+                      <li><a href="index3.jsp">Dashboard3</a></li>
                     </ul-->
                   </li>
                   <li><a><i class="fa fa-trophy"></i>Skills & Achievements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.html">Skills</a></li>
-                      <li><a href="media_gallery.html">Achievements</a></li>
-                      <!--li><a href="typography.html">Typography</a></li>
-                      <li><a href="icons.html">Icons</a></li>
-                      <li><a href="glyphicons.html">Glyphicons</a></li>
-                      <li><a href="widgets.html">Widgets</a></li>
-                      <li><a href="invoice.html">Invoice</a></li-->
+                      <li><a href="general_elements.jsp">Skills</a></li>
+                      <li><a href="media_gallery.jsp">Achievements</a></li>
+                      <!--li><a href="typography.jsp">Typography</a></li>
+                      <li><a href="icons.jsp">Icons</a></li>
+                      <li><a href="glyphicons.jsp">Glyphicons</a></li>
+                      <li><a href="widgets.jsp">Widgets</a></li>
+                      <li><a href="invoice.jsp">Invoice</a></li-->
                     </ul>
                   </li>
                   <li><a><i class="fa fa-file-text"></i> My CV <span class="fa fa-chevron-down"></span></a>
@@ -202,36 +202,36 @@
                       <li><a>View CV</a></li>
                       <li><a>Edit CV</a></li>
                       
-                      <!--li><a href="form_wizards.html">Form Wizard</a></li>
-                      <li><a href="form_upload.html">Form Upload</a></li>
-                      <li><a href="form_advanced.html">Advanced Components</a></li>
-                      <li><a href="form_buttons.html">Form Buttons</a></li-->
+                      <!--li><a href="form_wizards.jsp">Form Wizard</a></li>
+                      <li><a href="form_upload.jsp">Form Upload</a></li>
+                      <li><a href="form_advanced.jsp">Advanced Components</a></li>
+                      <li><a href="form_buttons.jsp">Form Buttons</a></li-->
                     </ul>
                   </li>
                   <li><a><i class="fa fa-user"></i> My Profile <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <!--li><a href="tables.html">Tables</a></li>
-                      <li><a href="tables_dynamic.html">Table Dynamic</a></li-->
-                        <li><a href="profile.html">Profile</a></li>
-                        <li><a href="form.html">Edit Profile</a></li>
-                        <li><a href="projects.html">My Jobs</a></li>
-                        <li><a href="inbox.html">Inbox</a></li>
-                       <li><a href="calendar.html">Calendar</a></li>
+                      <!--li><a href="tables.jsp">Tables</a></li>
+                      <li><a href="tables_dynamic.jsp">Table Dynamic</a></li-->
+                        <li><a href="profile.jsp">Profile</a></li>
+                        <li><a href="form.jsp">Edit Profile</a></li>
+                        <li><a href="projects.jsp">My Jobs</a></li>
+                        <li><a href="inbox.jsp">Inbox</a></li>
+                       <li><a href="calendar.jsp">Calendar</a></li>
                     </ul>
                   </li>
                   <!--li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.html">Chart JS</a></li>
-                      <li><a href="chartjs2.html">Chart JS2</a></li>
-                      <li><a href="morisjs.html">Moris JS</a></li>
-                      <li><a href="echarts.html">ECharts</a></li>
-                      <li><a href="other_charts.html">Other Charts</a></li>
+                      <li><a href="chartjs.jsp">Chart JS</a></li>
+                      <li><a href="chartjs2.jsp">Chart JS2</a></li>
+                      <li><a href="morisjs.jsp">Moris JS</a></li>
+                      <li><a href="echarts.jsp">ECharts</a></li>
+                      <li><a href="other_charts.jsp">Other Charts</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
+                      <li><a href="fixed_sidebar.jsp">Fixed Sidebar</a></li>
+                      <li><a href="fixed_footer.jsp">Fixed Footer</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -241,21 +241,21 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="e_commerce.html">E-commerce</a></li>
+                      <li><a href="e_commerce.jsp">E-commerce</a></li>
                       
-                      <li><a href="project_detail.html">Project Detail</a></li>
-                      <li><a href="contacts.html">Contacts</a></li>
+                      <li><a href="project_detail.jsp">Project Detail</a></li>
+                      <li><a href="contacts.jsp">Contacts</a></li>
                       
                     </ul>
                   </li>
                   <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="page_403.html">403 Error</a></li>
-                      <li><a href="page_404.html">404 Error</a></li>
-                      <li><a href="page_500.html">500 Error</a></li>
-                      <li><a href="plain_page.html">Plain Page</a></li>
-                      <li><a href="login.html">Login Page</a></li>
-                      <li><a href="pricing_tables.html">Pricing Tables</a></li>
+                      <li><a href="page_403.jsp">403 Error</a></li>
+                      <li><a href="page_404.jsp">404 Error</a></li>
+                      <li><a href="page_500.jsp">500 Error</a></li>
+                      <li><a href="plain_page.jsp">Plain Page</a></li>
+                      <li><a href="login.jsp">Login Page</a></li>
+                      <li><a href="pricing_tables.jsp">Pricing Tables</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
@@ -263,7 +263,7 @@
                         <li><a href="#level1_1">Level One</a>
                         <li><a>Level One<span class="fa fa-chevron-down"></span></a>
                           <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.html">Level Two</a>
+                            <li class="sub_menu"><a href="level2.jsp">Level Two</a>
                             </li>
                             <li><a href="#level2_1">Level Two</a>
                             </li>
@@ -293,7 +293,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a-->
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html" >
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.jsp" >
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -444,217 +444,143 @@
                   <div class="col-md-6">
                   <h3>Job postings </h3>
                   </div>
-                  <div class="col-md-6">
-                  <div id="reportrange" class="pull-right" style="background: #fff; cursor: pointer; padding: 5px 10px; border: 1px solid #ccc">
-                  <i class="glyphicon glyphicon-calendar fa fa-calendar"></i>
-                  <span>September 18, 2019 - September 24, 2019</span> <b class="caret"></b>
-                  </div>
-                  </div>
+                  
                   </div>
                   <div class="x_content">
                   <!--div class="demo-container" style="height:250px">
                   <div id="chart_plot_03" class="demo-placeholder" style="padding: 0px; position: relative;"><canvas class="flot-base" width="978" height="347" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 789px; height: 280px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 15px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 110px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 206px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 301px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 397px; text-align: center;">8</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 489px; text-align: center;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 584px; text-align: center;">12</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 680px; text-align: center;">14</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 775px; text-align: center;">16</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 252px; left: 7px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 220px; left: 7px; text-align: right;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 189px; left: 1px; text-align: right;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 157px; left: 1px; text-align: right;">15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 126px; left: 1px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 95px; left: 1px; text-align: right;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 63px; left: 1px; text-align: right;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 32px; left: 1px; text-align: right;">35</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px; text-align: right;">40</div></div></div><canvas class="flot-overlay" width="978" height="347" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 789px; height: 280px;"></canvas><div class="legend"><div style="position: absolute; width: 78px; height: 15px; top: 13px; right: 13px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(38,185,154);overflow:hidden"></div></div></td><td class="legendLabel">Registrations</td></tr></tbody></table></div></div>
                   </div-->
-                  <div>
-                      <script src="HomeAssets/vendors/chart.js/dist/Chart.bundle.js"></script>
-                      <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
-                      <canvas id="canvas"></canvas>
-                  
-                  <br>
-                  <br>
-                  <button id="randomizeData">Randomize Data</button>
-                  <button id="changeDataObject">Change Data Object</button>
-                  <button id="addDataset">Add Dataset</button>
-                  <button id="removeDataset">Remove Dataset</button>
-                  <button id="addData">Add Data</button>
-                  <button id="removeData">Remove Data</button>
-                  <script>
-                      var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                      
-                      var randomScalingFactor = function() {
-                          return Math.round(Math.random() * 100);
-                          //return 0;
-                      };
-                      var randomColorFactor = function() {
-                          return Math.round(Math.random() * 255);
-                      };
-                      var randomColor = function(opacity) {
-                          return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
-                      };
-              
-                      var config = {
-                          type: 'line',
-                          data: {
-                              labels: ["January", "February", "March", "April", "May", "June", "July"],
-                              datasets: [{
-                                  label: "My First dataset",
-                                  data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                                  fill: false,
-                                  borderDash: [5, 5],
-                              }, {
-                                  hidden: true,
-                                  label: 'hidden dataset',
-                                  data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                              }, {
-                                  label: "My Second dataset",
-                                  data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                              }]
-                          },
-                          options: {
-                              responsive: true,
-                              title:{
-                                  display:true,
-                                  /*text:'Chart.js Line Chart'*/
-                              },
-                              tooltips: {
-                                  mode: 'label',
-                                  callbacks: {
-                                      // beforeTitle: function() {
-                                      //     return '...beforeTitle';
-                                      // },
-                                      // afterTitle: function() {
-                                      //     return '...afterTitle';
-                                      // },
-                                      // beforeBody: function() {
-                                      //     return '...beforeBody';
-                                      // },
-                                      // afterBody: function() {
-                                      //     return '...afterBody';
-                                      // },
-                                      // beforeFooter: function() {
-                                      //     return '...beforeFooter';
-                                      // },
-                                      // footer: function() {
-                                      //     return 'Footer';
-                                      // },
-                                      // afterFooter: function() {
-                                      //     return '...afterFooter';
-                                      // },
-                                  }
-                              },
-                              hover: {
-                                  mode: 'dataset'
-                              },
-                              scales: {
-                                  xAxes: [{
-                                      display: true,
-                                      scaleLabel: {
-                                          show: true,
-                                          labelString: 'Month'
-                                      }
-                                  }],
-                                  yAxes: [{
-                                      display: true,
-                                      scaleLabel: {
-                                          show: true,
-                                          labelString: 'Value'
-                                      },
-                                      ticks: {
-                                          suggestedMin: -10,
-                                          suggestedMax: 250,
-                                      }
-                                  }]
-                              }
-                          }
-                      };
-              
-                      $.each(config.data.datasets, function(i, dataset) {
-                          dataset.borderColor = randomColor(0.4);
-                          dataset.backgroundColor = randomColor(0.5);
-                          dataset.pointBorderColor = randomColor(0.7);
-                          dataset.pointBackgroundColor = randomColor(0.5);
-                          dataset.pointBorderWidth = 1;
-                      });
-              
-                      window.onload = function() {
-                          var ctx = document.getElementById("canvas").getContext("2d");
-                          window.myLine = new Chart(ctx, config);
-                      };
-              
-                      $('#randomizeData').click(function() {
-                          $.each(config.data.datasets, function(i, dataset) {
-                              dataset.data = dataset.data.map(function() {
-                                  return randomScalingFactor();
-                              });
-              
-                          });
-              
-                          window.myLine.update();
-                      });
-              
-                      $('#changeDataObject').click(function() {
-                          config.data = {
-                              labels: ["July", "August", "September", "October", "November", "December"],
-                              datasets: [{
-                                  label: "My First dataset",
-                                  data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                                  fill: false,
-                              }, {
-                                  label: "My Second dataset",
-                                  fill: false,
-                                  data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                              }]
-                          };
-              
-                          $.each(config.data.datasets, function(i, dataset) {
-                              dataset.borderColor = randomColor(0.4);
-                              dataset.backgroundColor = randomColor(0.5);
-                              dataset.pointBorderColor = randomColor(0.7);
-                              dataset.pointBackgroundColor = randomColor(0.5);
-                              dataset.pointBorderWidth = 1;
-                          });
-              
-                          // Update the chart
-                          window.myLine.update();
-                      });
-              
-                      $('#addDataset').click(function() {
-                          var newDataset = {
-                              label: 'Dataset ' + config.data.datasets.length,
-                              borderColor: randomColor(0.4),
-                              backgroundColor: randomColor(0.5),
-                              pointBorderColor: randomColor(0.7),
-                              pointBackgroundColor: randomColor(0.5),
-                              pointBorderWidth: 1,
-                              data: [],
-                          };
-              
-                          for (var index = 0; index < config.data.labels.length; ++index) {
-                              newDataset.data.push(randomScalingFactor());
-                          }
-              
-                          config.data.datasets.push(newDataset);
-                          window.myLine.update();
-                      });
-              
-                      $('#addData').click(function() {
-                          if (config.data.datasets.length > 0) {
-                              var month = MONTHS[config.data.labels.length % MONTHS.length];
-                              config.data.labels.push(month);
-              
-                              $.each(config.data.datasets, function(i, dataset) {
-                                  dataset.data.push(randomScalingFactor());
-                              });
-              
-                              window.myLine.update();
-                          }
-                      });
-              
-                      $('#removeDataset').click(function() {
-                          config.data.datasets.splice(0, 1);
-                          window.myLine.update();
-                      });
-              
-                      $('#removeData').click(function() {
-                          config.data.labels.splice(-1, 1); // remove the label first
-              
-                          config.data.datasets.forEach(function(dataset, datasetIndex) {
-                              dataset.data.pop();
-                          });
-              
-                          window.myLine.update();
-                      });
-                  </script>
+                  <div style="width:100%;">
+                    <canvas id="canvas"></canvas>
+                </div>
+                <br>
+                <br>
+                <button id="randomizeData">Randomize Data</button>
+                <button id="addDataset">Add Dataset</button>
+                <button id="removeDataset">Remove Dataset</button>
+                <button id="addData">Add Data</button>
+                <button id="removeData">Remove Data</button>
+                <script>
+                    var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+            
+                    var randomScalingFactor = function() {
+                        return Math.round(Math.random() * 50 * (Math.random() > 0.5 ? 1 : 1)) + 50;
+                    };
+                    var randomColorFactor = function() {
+                        return Math.round(Math.random() * 255);
+                    };
+                    var randomColor = function(opacity) {
+                        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+                    };
+            
+                    var config = {
+                        type: 'line',
+                        data: {
+                            labels: ["January", "February", "March", "April", "May", "June", "July"],
+                            datasets: [{
+                                label: "My First dataset",
+                                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+                                fill: false,
+                                borderDash: [5, 5],
+                            }, {
+                                label: "My Second dataset",
+                                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
+                            }]
+                        },
+                        options: {
+                            responsive: true,
+                            title:{
+                                display:true,
+                                text:"Chart.js Line Chart - X-Axis Filter"
+                            },
+                            scales: {
+                                xAxes: [{
+                                    display: true,
+                                    ticks: {
+                                        userCallback: function(dataLabel, index) {
+                                            return index % 2 === 0 ? dataLabel : '';
+                                        }
+                                    }
+                                }],
+                                yAxes: [{
+                                    display: true,
+                                    beginAtZero: false
+                                }]
+                            }
+                        }
+                    };
+            
+                    $.each(config.data.datasets, function(i, dataset) {
+                        dataset.borderColor = randomColor(0.4);
+                        dataset.backgroundColor = randomColor(0.5);
+                        dataset.pointBorderColor = randomColor(0.7);
+                        dataset.pointBackgroundColor = randomColor(0.5);
+                        dataset.pointBorderWidth = 1;
+                    });
+            
+                    window.onload = function() {
+                        var ctx = document.getElementById("canvas").getContext("2d");
+                        window.myLine = new Chart(ctx, config);
+                    };
+            
+                    $('#randomizeData').click(function() {
+                        $.each(config.data.datasets, function(i, dataset) {
+                            dataset.data = dataset.data.map(function() {
+                                return randomScalingFactor();
+                            });
+            
+                        });
+            
+                        window.myLine.update();
+                    });
+            
+                    $('#addDataset').click(function() {
+                        var newDataset = {
+                            label: 'Dataset ' + config.data.datasets.length,
+                            borderColor: randomColor(0.4),
+                            backgroundColor: randomColor(0.5),
+                            pointBorderColor: randomColor(0.7),
+                            pointBackgroundColor: randomColor(0.5),
+                            pointBorderWidth: 1,
+                            data: [],
+                        };
+            
+                        for (var index = 0; index < config.data.labels.length; ++index) {
+                            newDataset.data.push(randomScalingFactor());
+                        }
+            
+                        config.data.datasets.push(newDataset);
+                        window.myLine.update();
+                    });
+            
+                    $('#addData').click(function() {
+                        if (config.data.datasets.length > 0) {
+                            var month = MONTHS[config.data.labels.length % MONTHS.length];
+                            config.data.labels.push(month);
+            
+                            for (var index = 0; index < config.data.datasets.length; ++index) {
+                                config.data.datasets[index].data.push(randomScalingFactor());
+                            }
+            
+                            window.myLine.update();
+                        }
+                    });
+            
+                    $('#removeDataset').click(function() {
+                        config.data.datasets.splice(0, 1);
+                        window.myLine.update();
+                    });
+            
+                    $('#removeData').click(function() {
+                        config.data.labels.splice(-1, 1); // remove the label first
+            
+                        config.data.datasets.forEach(function(dataset, datasetIndex) {
+                            dataset.data.pop();
+                        });
+            
+                        window.myLine.update();
+                    });
+                </script>
                   </div>
                   </div>
                   </div>
@@ -1304,7 +1230,7 @@
     <script src="HomeAssets/vendors/flot-spline/js/jquery.flot.spline.min.js"></script>
     <script src="HomeAssets/vendors/flot.curvedlines/curvedLines.js"></script>
     <!-- DateJS -->
-    <script src="HomeAssets/vendors/DateJS/HomeAssets/build/date.js"></script>
+    <script src="HomeAssets/vendors/DateJS/build/date.js"></script>
     <!-- JQVMap -->
     <script src="HomeAssets/vendors/jqvmap/dist/jquery.vmap.js"></script>
     <script src="HomeAssets/vendors/jqvmap/dist/maps/jquery.vmap.world.js"></script>
