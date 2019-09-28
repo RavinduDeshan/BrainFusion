@@ -70,12 +70,30 @@
      <script src="http://media.mq.edu.au/mas240/js/gallery.js"></script>
 
  
-    <style>
+     <style>
         canvas{
           -moz-user-select: none;
           -webkit-user-select: none;
           -ms-user-select: none;
         }
+        #chartjs-tooltip {
+      opacity: 1;
+      position: absolute;
+      background: rgba(0, 0, 0, .7);
+      color: white;
+      border-radius: 3px;
+      -webkit-transition: all .1s ease;
+      transition: all .1s ease;
+      pointer-events: none;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .chartjs-tooltip-key {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
         </style>
     
   </head>
@@ -95,7 +113,7 @@
                     <div class="divTableCel2">
                       <div class="collapse navbar1-collapse" id="ftco-nav">
                         <ul class="navbar1-nav ml-auto">
-                          <li class="nav-item active"><a href="index.jsp" class="nav-link">Home</a></li>
+                          <li class="nav-item "><a href="index.jsp" class="nav-link">Home</a></li>
                           <li class="nav-item"><a href="browseJobs.jsp" class="nav-link">Browse Jobs</a></li>
                           <li class="nav-item"><a href="candidates.jsp" class="nav-link">Experts</a></li>
                           <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
@@ -439,151 +457,169 @@
 
           <div class="row"> 
               <div class="col-md-7" >
-                  <div class="dashboard_graph x_panel">
-                  <div class="row x_title">
-                  <div class="col-md-6">
-                  <h3>Job postings </h3>
-                  </div>
+                  <div class="x_panel">
+  
+                    <div class="row x_title">
+                        <div class="col-md-6">
+                        <h3>Job postings </h3>
+                        </div>
+              
+                        <div style="width:100%;">
+                          <canvas id="canvas"></canvas>
+                      </div>
+                      <br>
+                      <br>
+  
+                    <button id="addDataset">Add Jobs</button>
+                    <button id="removeDataset">Reduce Jobs</button>
+                    <button id="addData">Add Timeline</button>
+                    <button id="removeData">Reduce Timeline</button>
+                      <script>
+                          var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                          var fe = [15,54,26,87,32,95,12,48,46,15,23,45];
+                          var qa = [54,32,64,15,43,49,19,12,54,32,61,15];
+                          var ba = [12,32,15,24,21,26,35,31,26,54,12,32];
+                          var ui = [32,31,64,35,64,15,16,5,4,46,21,14];
+                          var fs = [14,12,13,18,21,24,26,19,18,27,13,16];
+                          var gd = [16,14,18,24,29,35,34,31,28,27,20,15];
+                          var na = [32,31,22,24,45,26,31,15,18,19,16,14];
+                          var pt = [32,15,45,65,23,15,45,21,18,14,5,16];
+                          var randomScalingFactor = function() {
+                              return Math.round(Math.random() * 50 * (Math.random() > 0.5 ? 1 : 1)) + 50;
+                          };
+                          var randomColorFactor = function() {
+                              return Math.round(Math.random() * 255);
+                          };
+                          var randomColor = function(opacity) {
+                              return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+                          };
                   
+                          var config = {
+                              type: 'line',
+                              data: {
+                                  labels: ["January", "February", "March", "April", "May", "June", "July"],
+                                  datasets: [{
+                                      label: "Front End Developer",
+                                      data: fe,
+                                      fill: true,
+                                      borderDash: [5, 5],
+                                  }, {
+                                      label: "QA Engineer ",
+                                      data: qa,
+                                  },{
+                                      label: "Business Analyst ",
+                                      data: ba,
+                                  },{
+                                      label: "Data Analyst",
+                                      data: ui,
+                                  },{
+                                      label: "Full Stack Developer",
+                                      data: fs,
+                                  },{
+                                      label: "Graphic Designer",
+                                      data: gd,
+                                  },{
+                                      label: "Network Architect",
+                                      data: na,
+                                  }]
+                              },
+                              options: {
+                                  responsive: true,
+                                  title:{
+                                      display:true,
+                                     /* text:"Chart.js Line Chart - X-Axis Filter"*/
+                                  },
+                                  scales: {
+                                      xAxes: [{
+                                          display: true,
+                                          ticks: {
+                                              userCallback: function(dataLabel, index) {
+                                                  return index % 2 === 0 ? dataLabel : '';
+                                              }
+                                          }
+                                      }],
+                                      yAxes: [{
+                                          display: true,
+                                          beginAtZero: false
+                                      }]
+                                  }
+                              }
+                          };
+                  
+                          $.each(config.data.datasets, function(i, dataset) {
+                              dataset.borderColor = randomColor(0.4);
+                              dataset.backgroundColor = randomColor(0.5);
+                              dataset.pointBorderColor = randomColor(0.7);
+                              dataset.pointBackgroundColor = randomColor(0.5);
+                              dataset.pointBorderWidth = 1;
+                          });
+                  
+                          window.onload = function() {
+                              var ctx = document.getElementById("canvas").getContext("2d");
+                              window.myLine = new Chart(ctx, config);
+                          };
+                  
+                          $('#randomizeData').click(function() {
+                              $.each(config.data.datasets, function(i, dataset) {
+                                  dataset.data = dataset.data.map(function() {
+                                      return randomScalingFactor();
+                                  });
+                  
+                              });
+                  
+                              window.myLine.update();
+                          });
+                  
+                          $('#addDataset').click(function() {
+                              var newDataset = {
+                                  label: 'Dataset ' + config.data.datasets.length,
+                                  borderColor: randomColor(0.4),
+                                  backgroundColor: randomColor(0.5),
+                                  pointBorderColor: randomColor(0.7),
+                                  pointBackgroundColor: randomColor(0.5),
+                                  pointBorderWidth: 1,
+                                  data: [],
+                              };
+                  
+                              for (var index = 0; index < config.data.labels.length; ++index) {
+                                  newDataset.data.push(randomScalingFactor());
+                              }
+                  
+                              config.data.datasets.push(newDataset);
+                              window.myLine.update();
+                          });
+                  
+                          $('#addData').click(function() {
+                              if (config.data.datasets.length > 0) {
+                                  var month = MONTHS[config.data.labels.length % MONTHS.length];
+                                  config.data.labels.push(month);
+                  
+                                  for (var index = 0; index < config.data.datasets.length; ++index) {
+                                      config.data.datasets[index].data.push(randomScalingFactor());
+                                  }
+                  
+                                  window.myLine.update();
+                              }
+                          });
+                  
+                          $('#removeDataset').click(function() {
+                              config.data.datasets.splice(0, 1);
+                              window.myLine.update();
+                          });
+                  
+                          $('#removeData').click(function() {
+                              config.data.labels.splice(-1, 1); // remove the label first
+                  
+                              config.data.datasets.forEach(function(dataset, datasetIndex) {
+                                  dataset.data.pop();
+                              });
+                  
+                              window.myLine.update();
+                          });
+                      </script>
+                    </div>
                   </div>
-                  <div class="x_content">
-                  <!--div class="demo-container" style="height:250px">
-                  <div id="chart_plot_03" class="demo-placeholder" style="padding: 0px; position: relative;"><canvas class="flot-base" width="978" height="347" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 789px; height: 280px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 15px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 110px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 206px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 301px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 397px; text-align: center;">8</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 489px; text-align: center;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 584px; text-align: center;">12</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 680px; text-align: center;">14</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 775px; text-align: center;">16</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 252px; left: 7px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 220px; left: 7px; text-align: right;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 189px; left: 1px; text-align: right;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 157px; left: 1px; text-align: right;">15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 126px; left: 1px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 95px; left: 1px; text-align: right;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 63px; left: 1px; text-align: right;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 32px; left: 1px; text-align: right;">35</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px; text-align: right;">40</div></div></div><canvas class="flot-overlay" width="978" height="347" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 789px; height: 280px;"></canvas><div class="legend"><div style="position: absolute; width: 78px; height: 15px; top: 13px; right: 13px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(38,185,154);overflow:hidden"></div></div></td><td class="legendLabel">Registrations</td></tr></tbody></table></div></div>
-                  </div-->
-                  <div style="width:100%;">
-                    <canvas id="canvas"></canvas>
                 </div>
-                <br>
-                <br>
-                <button id="randomizeData">Randomize Data</button>
-                <button id="addDataset">Add Dataset</button>
-                <button id="removeDataset">Remove Dataset</button>
-                <button id="addData">Add Data</button>
-                <button id="removeData">Remove Data</button>
-                <script>
-                    var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            
-                    var randomScalingFactor = function() {
-                        return Math.round(Math.random() * 50 * (Math.random() > 0.5 ? 1 : 1)) + 50;
-                    };
-                    var randomColorFactor = function() {
-                        return Math.round(Math.random() * 255);
-                    };
-                    var randomColor = function(opacity) {
-                        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
-                    };
-            
-                    var config = {
-                        type: 'line',
-                        data: {
-                            labels: ["January", "February", "March", "April", "May", "June", "July"],
-                            datasets: [{
-                                label: "My First dataset",
-                                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                                fill: false,
-                                borderDash: [5, 5],
-                            }, {
-                                label: "My Second dataset",
-                                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            title:{
-                                display:true,
-                                text:"Chart.js Line Chart - X-Axis Filter"
-                            },
-                            scales: {
-                                xAxes: [{
-                                    display: true,
-                                    ticks: {
-                                        userCallback: function(dataLabel, index) {
-                                            return index % 2 === 0 ? dataLabel : '';
-                                        }
-                                    }
-                                }],
-                                yAxes: [{
-                                    display: true,
-                                    beginAtZero: false
-                                }]
-                            }
-                        }
-                    };
-            
-                    $.each(config.data.datasets, function(i, dataset) {
-                        dataset.borderColor = randomColor(0.4);
-                        dataset.backgroundColor = randomColor(0.5);
-                        dataset.pointBorderColor = randomColor(0.7);
-                        dataset.pointBackgroundColor = randomColor(0.5);
-                        dataset.pointBorderWidth = 1;
-                    });
-            
-                    window.onload = function() {
-                        var ctx = document.getElementById("canvas").getContext("2d");
-                        window.myLine = new Chart(ctx, config);
-                    };
-            
-                    $('#randomizeData').click(function() {
-                        $.each(config.data.datasets, function(i, dataset) {
-                            dataset.data = dataset.data.map(function() {
-                                return randomScalingFactor();
-                            });
-            
-                        });
-            
-                        window.myLine.update();
-                    });
-            
-                    $('#addDataset').click(function() {
-                        var newDataset = {
-                            label: 'Dataset ' + config.data.datasets.length,
-                            borderColor: randomColor(0.4),
-                            backgroundColor: randomColor(0.5),
-                            pointBorderColor: randomColor(0.7),
-                            pointBackgroundColor: randomColor(0.5),
-                            pointBorderWidth: 1,
-                            data: [],
-                        };
-            
-                        for (var index = 0; index < config.data.labels.length; ++index) {
-                            newDataset.data.push(randomScalingFactor());
-                        }
-            
-                        config.data.datasets.push(newDataset);
-                        window.myLine.update();
-                    });
-            
-                    $('#addData').click(function() {
-                        if (config.data.datasets.length > 0) {
-                            var month = MONTHS[config.data.labels.length % MONTHS.length];
-                            config.data.labels.push(month);
-            
-                            for (var index = 0; index < config.data.datasets.length; ++index) {
-                                config.data.datasets[index].data.push(randomScalingFactor());
-                            }
-            
-                            window.myLine.update();
-                        }
-                    });
-            
-                    $('#removeDataset').click(function() {
-                        config.data.datasets.splice(0, 1);
-                        window.myLine.update();
-                    });
-            
-                    $('#removeData').click(function() {
-                        config.data.labels.splice(-1, 1); // remove the label first
-            
-                        config.data.datasets.forEach(function(dataset, datasetIndex) {
-                            dataset.data.pop();
-                        });
-            
-                        window.myLine.update();
-                    });
-                </script>
-                  </div>
-                  </div>
-                  </div>
                   </div>
                   <div class="col-md-5 col-sm-4 col-xs-12">
                       <div class="x_panel" id="canvas">
@@ -592,20 +628,20 @@
                           
                           <div class="clearfix"></div>
                         </div>
-                        <div class="x_content" style="overflow: auto; box-sizing: border-box;max-height: 406px; overflow-y: scroll;">
+                        <div class="x_content" style="overflow: auto; box-sizing: border-box;max-height: 366px; overflow-y: scroll;">
                           <div class="dashboard-widget-content" >
-        
+              
                             <ul class="list-unstyled timeline widget">
                               <li>
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Jay Raj</span> on <a>Sitepoint</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -614,12 +650,12 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Nisha Talagala</span> on <a>Forbes</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -628,12 +664,12 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Jay Raj</span> on <a>Sitepoint</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -642,12 +678,12 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Nisha Talagala</span> on <a>Forbes</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -659,50 +695,35 @@
                     </div>
                   </div>
           <div class="row">
-            <div class="col-md-12">
-                <div class="x_panel">
-                    <div class="x_title">
-                        <h2>Latest videos</h2>
-                        <div class="clearfix"></div>
+              <div class="col-md-12">
+                  <div class="x_panel">
+                      <div class="x_title">
+                          <h2>Latest videos</h2>
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="row" style="overflow-x: hidden;display: flex;overflow-y: auto;align-items:center;width: 100%;max-height: 332px;">
+                      <div class="col-md-3">
+                      <div><div data-courseid="362328" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate/" data-purpose="merchandising-course-card-body-362328" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/362328_91f3_10.jpg" srcset="https://i.udemycdn.com/course/240x135/362328_91f3_10.jpg 1x, https://i.udemycdn.com/course/480x270/362328_91f3_10.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">AWS Certified Solutions Architect - Associate 2019</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Ryan Kroonenburg, Faye Ellis</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.5 out of 5, 147,717 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 50%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"><span class="star-rating--reviews__count--1Zo2k" data-purpose="course-card-review-count"></span></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span class="sr-only"></span><span><span></span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span class="sr-only"></span><span><s><span></span></s></span></div></div></div></div></div></a></div></div>
+                      </div>
+                      <div class="col-md-3">
+                      <div><div data-courseid="393306" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/aws-certified-developer-associate/" data-purpose="merchandising-course-card-body-393306" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/393306_f2a5_6.jpg" srcset="https://i.udemycdn.com/course/240x135/393306_f2a5_6.jpg 1x, https://i.udemycdn.com/course/480x270/393306_f2a5_6.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">AWS Certified Developer - Associate 2019</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Ryan Kroonenburg, Faye Ellis</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.3 out of 5, 31,105 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 30%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"><span class="star-rating--reviews__stats--3ANGp" data-purpose="course-card-star-rating"></span></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span><span></span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span class="sr-only"></span><span><s></s></span></div></div></div></div></div></a></div></div>
                     </div>
-                    <div class="row" style="overflow-x: hidden;display: flex;overflow-y: auto;align-items:center;width: 100%;max-height: 332px;">
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
+                        
+                      <div class="col-md-3">
+                      <div><div data-courseid="950390" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/machinelearning/" data-purpose="merchandising-course-card-body-950390" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/950390_270f_3.jpg" srcset="https://i.udemycdn.com/course/240x135/950390_270f_3.jpg 1x, https://i.udemycdn.com/course/480x270/950390_270f_3.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">Machine Learning A-Z™: Hands-On Python &amp; R In Data Science</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Kirill Eremenko...</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.5 out of 5, 93,582 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 50%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"><span class="star-rating--reviews__stats--3ANGp" data-purpose="course-card-star-rating"></span></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span><s></s></span></div></div></div></div></div></a></div></div>
                     </div>
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
                       
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
+                      <div class="col-md-3">
+                      <div><div data-courseid="903744" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/" data-purpose="merchandising-course-card-body-903744" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/903744_8eb2.jpg" srcset="https://i.udemycdn.com/course/240x135/903744_8eb2.jpg 1x, https://i.udemycdn.com/course/480x270/903744_8eb2.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">Python for Data Science and Machine Learning Bootcamp</div><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Jose Portilla</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.5 out of 5, 52,513 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 50%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span><s></s></span></div></div></div></div></div></a></div></div>
+                    </div>
                     
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>     
-
-                  </div>
-                  </div>
-            </div> 
+                      <div class="col-md-3">
+                      <div><div data-courseid="762616" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/the-complete-sql-bootcamp/" data-purpose="merchandising-course-card-body-762616" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/762616_7693_3.jpg" srcset="https://i.udemycdn.com/course/240x135/762616_7693_3.jpg 1x, https://i.udemycdn.com/course/480x270/762616_7693_3.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">The Complete SQL Bootcamp</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Jose Portilla</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.6 out of 5, 41,620 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 60%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span><s></s></span></div></div></div></div></div></a></div></div>
+                    </div>     
+  
+                    </div>
+                    </div>
+              </div>
         </div>
           <div class="row">
                   <div class="col-md-6">
@@ -743,7 +764,7 @@
                         <div class="x_content">
                           <div class="dashboard-widget-content">
                             <div class="col-md-4 hidden-small">
-                              <h2 class="line_30">125.7k Views from 60 countries</h2>
+                              <h2 class="line_30">From almost 1000 entries</h2>
     
                               <table class="countries_list">
                                 <tbody>
