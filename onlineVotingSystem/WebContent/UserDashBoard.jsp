@@ -628,20 +628,20 @@
                           
                           <div class="clearfix"></div>
                         </div>
-                        <div class="x_content" style="overflow: auto; box-sizing: border-box;max-height: 406px; overflow-y: scroll;">
+                        <div class="x_content" style="overflow: auto; box-sizing: border-box;max-height: 366px; overflow-y: scroll;">
                           <div class="dashboard-widget-content" >
-        
+              
                             <ul class="list-unstyled timeline widget">
                               <li>
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a>An Introduction to the MEAN Stack</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Jay Raj</span> on <a>Sitepoint</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -650,12 +650,12 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a>The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Nisha Talagala</span> on <a>Forbes</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -664,12 +664,12 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a>An Introduction to the MEAN Stack</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Jay Raj</span> on <a>Sitepoint</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -678,12 +678,12 @@
                                 <div class="block">
                                   <div class="block_content">
                                     <h2 class="title">
-                                                      <a>Who Needs Sundance When You’ve Got&nbsp;Crowdfunding?</a>
+                                                      <a>The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
                                                   </h2>
                                     <div class="byline">
-                                      <span>13 hours ago</span> by <a>Jane Smith</a>
+                                      <span>Nisha Talagala</span> on <a>Forbes</a>
                                     </div>
-                                    <p class="excerpt">Film festivals used to be do-or-die moments for movie makers. They were where you met the producers that could fund your project, and if the buyers liked your flick, they’d pay to Fast-forward and… <a>Read&nbsp;More</a>
+                                    <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
                                     </p>
                                   </div>
                                 </div>
@@ -695,50 +695,35 @@
                     </div>
                   </div>
           <div class="row">
-            <div class="col-md-12">
-                <div class="x_panel">
-                    <div class="x_title">
-                        <h2>Latest videos</h2>
-                        <div class="clearfix"></div>
+              <div class="col-md-12">
+                  <div class="x_panel">
+                      <div class="x_title">
+                          <h2>Latest videos</h2>
+                          <div class="clearfix"></div>
+                      </div>
+                      <div class="row" style="overflow-x: hidden;display: flex;overflow-y: auto;align-items:center;width: 100%;max-height: 332px;">
+                      <div class="col-md-3">
+                      <div><div data-courseid="362328" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/aws-certified-solutions-architect-associate/" data-purpose="merchandising-course-card-body-362328" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/362328_91f3_10.jpg" srcset="https://i.udemycdn.com/course/240x135/362328_91f3_10.jpg 1x, https://i.udemycdn.com/course/480x270/362328_91f3_10.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">AWS Certified Solutions Architect - Associate 2019</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Ryan Kroonenburg, Faye Ellis</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.5 out of 5, 147,717 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 50%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"><span class="star-rating--reviews__count--1Zo2k" data-purpose="course-card-review-count"></span></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span class="sr-only"></span><span><span></span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span class="sr-only"></span><span><s><span></span></s></span></div></div></div></div></div></a></div></div>
+                      </div>
+                      <div class="col-md-3">
+                      <div><div data-courseid="393306" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/aws-certified-developer-associate/" data-purpose="merchandising-course-card-body-393306" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/393306_f2a5_6.jpg" srcset="https://i.udemycdn.com/course/240x135/393306_f2a5_6.jpg 1x, https://i.udemycdn.com/course/480x270/393306_f2a5_6.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">AWS Certified Developer - Associate 2019</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Ryan Kroonenburg, Faye Ellis</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.3 out of 5, 31,105 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 30%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"><span class="star-rating--reviews__stats--3ANGp" data-purpose="course-card-star-rating"></span></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span><span></span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span class="sr-only"></span><span><s></s></span></div></div></div></div></div></a></div></div>
                     </div>
-                    <div class="row" style="overflow-x: hidden;display: flex;overflow-y: auto;align-items:center;width: 100%;max-height: 332px;">
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
+                        
+                      <div class="col-md-3">
+                      <div><div data-courseid="950390" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/machinelearning/" data-purpose="merchandising-course-card-body-950390" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/950390_270f_3.jpg" srcset="https://i.udemycdn.com/course/240x135/950390_270f_3.jpg 1x, https://i.udemycdn.com/course/480x270/950390_270f_3.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">Machine Learning A-Z™: Hands-On Python &amp; R In Data Science</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Kirill Eremenko...</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.5 out of 5, 93,582 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 50%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"><span class="star-rating--reviews__stats--3ANGp" data-purpose="course-card-star-rating"></span></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span><s></s></span></div></div></div></div></div></a></div></div>
                     </div>
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
                       
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
+                      <div class="col-md-3">
+                      <div><div data-courseid="903744" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/python-for-data-science-and-machine-learning-bootcamp/" data-purpose="merchandising-course-card-body-903744" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/903744_8eb2.jpg" srcset="https://i.udemycdn.com/course/240x135/903744_8eb2.jpg 1x, https://i.udemycdn.com/course/480x270/903744_8eb2.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">Python for Data Science and Machine Learning Bootcamp</div><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Jose Portilla</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.5 out of 5, 52,513 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 50%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span><s></s></span></div></div></div></div></div></a></div></div>
+                    </div>
                     
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>
-                  
-                    <div class="col-md-3">
-                    <video width="100%" height="100%" controls>
-                    <source src="./HomeAssets/images/video.mp4" type="video/mp4">    
-                    Your browser does not support the video tag.
-                    </video>
-                  </div>     
-
-                  </div>
-                  </div>
-            </div> 
+                      <div class="col-md-3">
+                      <div><div data-courseid="762616" class="course-discovery-unit--card-margin--2TVw4 merchandising-course-card--card--2UfMa"><a href="https://www.udemy.com/course/the-complete-sql-bootcamp/" data-purpose="merchandising-course-card-body-762616" target="_self" class="merchandising-course-card--mask--2-b-d"><div class="merchandising-course-card--card-header--89z8L"><img class="merchandising-course-card--course-image--3G7Kh" alt="" width="240" height="135" src="https://i.udemycdn.com/course/240x135/762616_7693_3.jpg" srcset="https://i.udemycdn.com/course/240x135/762616_7693_3.jpg 1x, https://i.udemycdn.com/course/480x270/762616_7693_3.jpg 2x"></div><div class="merchandising-course-card--card-body--3OpAH"><div><div class="merchandising-course-card--course-title--2Ob4m" data-purpose="course-card-title">The Complete SQL Bootcamp</div><span class="course-badge--course-badge--1AN7r"><span data-purpose="badge" class="on-course-card badge badge-accented yellow"></span></span><span class="merchandising-course-card--instructor-titles--vXVfV" data-purpose="course-card-instructor-titles">Jose Portilla</span></div><div class="fx-jsb"><span data-purpose="details-rating" class="star-rating--details__rating--36AIt"><span class="star-rating--star-container--186zZ"><div aria-label="Rating: 4.6 out of 5, 41,620 reviews" data-purpose="star-rating-shell" class="star-rating-shell star-rating--star-rating--static--3wPvS star-rating--star-rating--tiny--2kjvX"><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 100%;"></span></div><div><span class="star-rating--review-star--Z6Nqj star-rating--review-star--unfilled--1aZxo"></span><span class="star-rating--review-star--Z6Nqj star-rating--review-star--filled--2D0bO" style="width: 60%;"></span></div></div></span><span aria-hidden="true" class="star-rating--review__numbers-container--2euA-"></span></span></div><div class="merchandising-course-card--price-wrapper--1eeWg" data-purpose="course-card-price-wrapper"><div class="price-text-container price-text--base-price__container--Xwk8v price-text--reverse--1rh1B" data-purpose="price-text-container"><div class="course-price-text price-text--base-price__discount--1J7vF price-text--black--1qJbH price-text--medium--2clK9 price-text--semibold--DLyJV" data-purpose="course-price-text"><span></span></div><div class="original-price-container price-text--base-price__original--98W0j price-text--lighter--1OoLd price-text--xsmall--nWcmv price-text--regular--2D_Ii" data-purpose="original-price-container"><div data-purpose="course-old-price-text"><span><s></s></span></div></div></div></div></div></a></div></div>
+                    </div>     
+  
+                    </div>
+                    </div>
+              </div>
         </div>
           <div class="row">
                   <div class="col-md-6">
