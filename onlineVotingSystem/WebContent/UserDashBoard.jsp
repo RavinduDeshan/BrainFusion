@@ -70,12 +70,30 @@
      <script src="http://media.mq.edu.au/mas240/js/gallery.js"></script>
 
  
-    <style>
+     <style>
         canvas{
           -moz-user-select: none;
           -webkit-user-select: none;
           -ms-user-select: none;
         }
+        #chartjs-tooltip {
+      opacity: 1;
+      position: absolute;
+      background: rgba(0, 0, 0, .7);
+      color: white;
+      border-radius: 3px;
+      -webkit-transition: all .1s ease;
+      transition: all .1s ease;
+      pointer-events: none;
+      -webkit-transform: translate(-50%, 0);
+      transform: translate(-50%, 0);
+    }
+
+    .chartjs-tooltip-key {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+    }
         </style>
     
   </head>
@@ -439,151 +457,169 @@
 
           <div class="row"> 
               <div class="col-md-7" >
-                  <div class="dashboard_graph x_panel">
-                  <div class="row x_title">
-                  <div class="col-md-6">
-                  <h3>Job postings </h3>
-                  </div>
+                  <div class="x_panel">
+  
+                    <div class="row x_title">
+                        <div class="col-md-6">
+                        <h3>Job postings </h3>
+                        </div>
+              
+                        <div style="width:100%;">
+                          <canvas id="canvas"></canvas>
+                      </div>
+                      <br>
+                      <br>
+  
+                    <button id="addDataset">Add Jobs</button>
+                    <button id="removeDataset">Reduce Jobs</button>
+                    <button id="addData">Add Timeline</button>
+                    <button id="removeData">Reduce Timeline</button>
+                      <script>
+                          var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                          var fe = [15,54,26,87,32,95,12,48,46,15,23,45];
+                          var qa = [54,32,64,15,43,49,19,12,54,32,61,15];
+                          var ba = [12,32,15,24,21,26,35,31,26,54,12,32];
+                          var ui = [32,31,64,35,64,15,16,5,4,46,21,14];
+                          var fs = [14,12,13,18,21,24,26,19,18,27,13,16];
+                          var gd = [16,14,18,24,29,35,34,31,28,27,20,15];
+                          var na = [32,31,22,24,45,26,31,15,18,19,16,14];
+                          var pt = [32,15,45,65,23,15,45,21,18,14,5,16];
+                          var randomScalingFactor = function() {
+                              return Math.round(Math.random() * 50 * (Math.random() > 0.5 ? 1 : 1)) + 50;
+                          };
+                          var randomColorFactor = function() {
+                              return Math.round(Math.random() * 255);
+                          };
+                          var randomColor = function(opacity) {
+                              return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+                          };
                   
+                          var config = {
+                              type: 'line',
+                              data: {
+                                  labels: ["January", "February", "March", "April", "May", "June", "July"],
+                                  datasets: [{
+                                      label: "Front End Developer",
+                                      data: fe,
+                                      fill: true,
+                                      borderDash: [5, 5],
+                                  }, {
+                                      label: "QA Engineer ",
+                                      data: qa,
+                                  },{
+                                      label: "Business Analyst ",
+                                      data: ba,
+                                  },{
+                                      label: "Data Analyst",
+                                      data: ui,
+                                  },{
+                                      label: "Full Stack Developer",
+                                      data: fs,
+                                  },{
+                                      label: "Graphic Designer",
+                                      data: gd,
+                                  },{
+                                      label: "Network Architect",
+                                      data: na,
+                                  }]
+                              },
+                              options: {
+                                  responsive: true,
+                                  title:{
+                                      display:true,
+                                     /* text:"Chart.js Line Chart - X-Axis Filter"*/
+                                  },
+                                  scales: {
+                                      xAxes: [{
+                                          display: true,
+                                          ticks: {
+                                              userCallback: function(dataLabel, index) {
+                                                  return index % 2 === 0 ? dataLabel : '';
+                                              }
+                                          }
+                                      }],
+                                      yAxes: [{
+                                          display: true,
+                                          beginAtZero: false
+                                      }]
+                                  }
+                              }
+                          };
+                  
+                          $.each(config.data.datasets, function(i, dataset) {
+                              dataset.borderColor = randomColor(0.4);
+                              dataset.backgroundColor = randomColor(0.5);
+                              dataset.pointBorderColor = randomColor(0.7);
+                              dataset.pointBackgroundColor = randomColor(0.5);
+                              dataset.pointBorderWidth = 1;
+                          });
+                  
+                          window.onload = function() {
+                              var ctx = document.getElementById("canvas").getContext("2d");
+                              window.myLine = new Chart(ctx, config);
+                          };
+                  
+                          $('#randomizeData').click(function() {
+                              $.each(config.data.datasets, function(i, dataset) {
+                                  dataset.data = dataset.data.map(function() {
+                                      return randomScalingFactor();
+                                  });
+                  
+                              });
+                  
+                              window.myLine.update();
+                          });
+                  
+                          $('#addDataset').click(function() {
+                              var newDataset = {
+                                  label: 'Dataset ' + config.data.datasets.length,
+                                  borderColor: randomColor(0.4),
+                                  backgroundColor: randomColor(0.5),
+                                  pointBorderColor: randomColor(0.7),
+                                  pointBackgroundColor: randomColor(0.5),
+                                  pointBorderWidth: 1,
+                                  data: [],
+                              };
+                  
+                              for (var index = 0; index < config.data.labels.length; ++index) {
+                                  newDataset.data.push(randomScalingFactor());
+                              }
+                  
+                              config.data.datasets.push(newDataset);
+                              window.myLine.update();
+                          });
+                  
+                          $('#addData').click(function() {
+                              if (config.data.datasets.length > 0) {
+                                  var month = MONTHS[config.data.labels.length % MONTHS.length];
+                                  config.data.labels.push(month);
+                  
+                                  for (var index = 0; index < config.data.datasets.length; ++index) {
+                                      config.data.datasets[index].data.push(randomScalingFactor());
+                                  }
+                  
+                                  window.myLine.update();
+                              }
+                          });
+                  
+                          $('#removeDataset').click(function() {
+                              config.data.datasets.splice(0, 1);
+                              window.myLine.update();
+                          });
+                  
+                          $('#removeData').click(function() {
+                              config.data.labels.splice(-1, 1); // remove the label first
+                  
+                              config.data.datasets.forEach(function(dataset, datasetIndex) {
+                                  dataset.data.pop();
+                              });
+                  
+                              window.myLine.update();
+                          });
+                      </script>
+                    </div>
                   </div>
-                  <div class="x_content">
-                  <!--div class="demo-container" style="height:250px">
-                  <div id="chart_plot_03" class="demo-placeholder" style="padding: 0px; position: relative;"><canvas class="flot-base" width="978" height="347" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 789px; height: 280px;"></canvas><div class="flot-text" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; font-size: smaller; color: rgb(84, 84, 84);"><div class="flot-x-axis flot-x1-axis xAxis x1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 15px; text-align: center;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 110px; text-align: center;">2</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 206px; text-align: center;">4</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 301px; text-align: center;">6</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 397px; text-align: center;">8</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 489px; text-align: center;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 584px; text-align: center;">12</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 680px; text-align: center;">14</div><div class="flot-tick-label tickLabel" style="position: absolute; max-width: 87px; top: 264px; left: 775px; text-align: center;">16</div></div><div class="flot-y-axis flot-y1-axis yAxis y1Axis" style="position: absolute; top: 0px; left: 0px; bottom: 0px; right: 0px; display: block;"><div class="flot-tick-label tickLabel" style="position: absolute; top: 252px; left: 7px; text-align: right;">0</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 220px; left: 7px; text-align: right;">5</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 189px; left: 1px; text-align: right;">10</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 157px; left: 1px; text-align: right;">15</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 126px; left: 1px; text-align: right;">20</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 95px; left: 1px; text-align: right;">25</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 63px; left: 1px; text-align: right;">30</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 32px; left: 1px; text-align: right;">35</div><div class="flot-tick-label tickLabel" style="position: absolute; top: 1px; left: 1px; text-align: right;">40</div></div></div><canvas class="flot-overlay" width="978" height="347" style="direction: ltr; position: absolute; left: 0px; top: 0px; width: 789px; height: 280px;"></canvas><div class="legend"><div style="position: absolute; width: 78px; height: 15px; top: 13px; right: 13px; background-color: rgb(255, 255, 255); opacity: 0.85;"> </div><table style="position:absolute;top:13px;right:13px;;font-size:smaller;color:#545454"><tbody><tr><td class="legendColorBox"><div style="border:1px solid #ccc;padding:1px"><div style="width:4px;height:0;border:5px solid rgb(38,185,154);overflow:hidden"></div></div></td><td class="legendLabel">Registrations</td></tr></tbody></table></div></div>
-                  </div-->
-                  <div style="width:100%;">
-                    <canvas id="canvas"></canvas>
                 </div>
-                <br>
-                <br>
-                <button id="randomizeData">Randomize Data</button>
-                <button id="addDataset">Add Dataset</button>
-                <button id="removeDataset">Remove Dataset</button>
-                <button id="addData">Add Data</button>
-                <button id="removeData">Remove Data</button>
-                <script>
-                    var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-            
-                    var randomScalingFactor = function() {
-                        return Math.round(Math.random() * 50 * (Math.random() > 0.5 ? 1 : 1)) + 50;
-                    };
-                    var randomColorFactor = function() {
-                        return Math.round(Math.random() * 255);
-                    };
-                    var randomColor = function(opacity) {
-                        return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
-                    };
-            
-                    var config = {
-                        type: 'line',
-                        data: {
-                            labels: ["January", "February", "March", "April", "May", "June", "July"],
-                            datasets: [{
-                                label: "My First dataset",
-                                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                                fill: false,
-                                borderDash: [5, 5],
-                            }, {
-                                label: "My Second dataset",
-                                data: [randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor(), randomScalingFactor()],
-                            }]
-                        },
-                        options: {
-                            responsive: true,
-                            title:{
-                                display:true,
-                                text:"Chart.js Line Chart - X-Axis Filter"
-                            },
-                            scales: {
-                                xAxes: [{
-                                    display: true,
-                                    ticks: {
-                                        userCallback: function(dataLabel, index) {
-                                            return index % 2 === 0 ? dataLabel : '';
-                                        }
-                                    }
-                                }],
-                                yAxes: [{
-                                    display: true,
-                                    beginAtZero: false
-                                }]
-                            }
-                        }
-                    };
-            
-                    $.each(config.data.datasets, function(i, dataset) {
-                        dataset.borderColor = randomColor(0.4);
-                        dataset.backgroundColor = randomColor(0.5);
-                        dataset.pointBorderColor = randomColor(0.7);
-                        dataset.pointBackgroundColor = randomColor(0.5);
-                        dataset.pointBorderWidth = 1;
-                    });
-            
-                    window.onload = function() {
-                        var ctx = document.getElementById("canvas").getContext("2d");
-                        window.myLine = new Chart(ctx, config);
-                    };
-            
-                    $('#randomizeData').click(function() {
-                        $.each(config.data.datasets, function(i, dataset) {
-                            dataset.data = dataset.data.map(function() {
-                                return randomScalingFactor();
-                            });
-            
-                        });
-            
-                        window.myLine.update();
-                    });
-            
-                    $('#addDataset').click(function() {
-                        var newDataset = {
-                            label: 'Dataset ' + config.data.datasets.length,
-                            borderColor: randomColor(0.4),
-                            backgroundColor: randomColor(0.5),
-                            pointBorderColor: randomColor(0.7),
-                            pointBackgroundColor: randomColor(0.5),
-                            pointBorderWidth: 1,
-                            data: [],
-                        };
-            
-                        for (var index = 0; index < config.data.labels.length; ++index) {
-                            newDataset.data.push(randomScalingFactor());
-                        }
-            
-                        config.data.datasets.push(newDataset);
-                        window.myLine.update();
-                    });
-            
-                    $('#addData').click(function() {
-                        if (config.data.datasets.length > 0) {
-                            var month = MONTHS[config.data.labels.length % MONTHS.length];
-                            config.data.labels.push(month);
-            
-                            for (var index = 0; index < config.data.datasets.length; ++index) {
-                                config.data.datasets[index].data.push(randomScalingFactor());
-                            }
-            
-                            window.myLine.update();
-                        }
-                    });
-            
-                    $('#removeDataset').click(function() {
-                        config.data.datasets.splice(0, 1);
-                        window.myLine.update();
-                    });
-            
-                    $('#removeData').click(function() {
-                        config.data.labels.splice(-1, 1); // remove the label first
-            
-                        config.data.datasets.forEach(function(dataset, datasetIndex) {
-                            dataset.data.pop();
-                        });
-            
-                        window.myLine.update();
-                    });
-                </script>
-                  </div>
-                  </div>
-                  </div>
                   </div>
                   <div class="col-md-5 col-sm-4 col-xs-12">
                       <div class="x_panel" id="canvas">
