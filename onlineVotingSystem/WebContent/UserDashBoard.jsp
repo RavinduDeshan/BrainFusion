@@ -217,13 +217,9 @@
                   </li>
                   <li><a><i class="fa fa-file-text"></i> My CV <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a>View CV</a></li>
+                      <li><a href="mycv.jsp">View CV</a></li>
                       <li><a>Edit CV</a></li>
-                      
-                      <!--li><a href="form_wizards.jsp">Form Wizard</a></li>
-                      <li><a href="form_upload.jsp">Form Upload</a></li>
-                      <li><a href="form_advanced.jsp">Advanced Components</a></li>
-                      <li><a href="form_buttons.jsp">Form Buttons</a></li-->
+ 
                     </ul>
                   </li>
                   <li><a><i class="fa fa-user"></i> My Profile <span class="fa fa-chevron-down"></span></a>
@@ -237,64 +233,7 @@
                        <li><a href="calendar.jsp">Calendar</a></li>
                     </ul>
                   </li>
-                  <!--li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="chartjs.jsp">Chart JS</a></li>
-                      <li><a href="chartjs2.jsp">Chart JS2</a></li>
-                      <li><a href="morisjs.jsp">Moris JS</a></li>
-                      <li><a href="echarts.jsp">ECharts</a></li>
-                      <li><a href="other_charts.jsp">Other Charts</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.jsp">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.jsp">Fixed Footer</a></li>
-                    </ul>
-                  </li>
-                </ul>
-              </div>
-              <div class="menu_section">
-                <h3>Live On</h3>
-                <ul class="nav side-menu">
-                  <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="e_commerce.jsp">E-commerce</a></li>
-                      
-                      <li><a href="project_detail.jsp">Project Detail</a></li>
-                      <li><a href="contacts.jsp">Contacts</a></li>
-                      
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                      <li><a href="page_403.jsp">403 Error</a></li>
-                      <li><a href="page_404.jsp">404 Error</a></li>
-                      <li><a href="page_500.jsp">500 Error</a></li>
-                      <li><a href="plain_page.jsp">Plain Page</a></li>
-                      <li><a href="login.jsp">Login Page</a></li>
-                      <li><a href="pricing_tables.jsp">Pricing Tables</a></li>
-                    </ul>
-                  </li>
-                  <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
-                    <ul class="nav child_menu">
-                        <li><a href="#level1_1">Level One</a>
-                        <li><a>Level One<span class="fa fa-chevron-down"></span></a>
-                          <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.jsp">Level Two</a>
-                            </li>
-                            <li><a href="#level2_1">Level Two</a>
-                            </li>
-                            <li><a href="#level2_2">Level Two</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a href="#level1_2">Level One</a>
-                        </li>
-                    </ul>
-                  </li>                  
-                  <li><a href="javascript:void(0)"><i class="fa fa-laptop"></i> Landing Page <span class="label label-success pull-right">Coming Soon</span></a></li>
-                </ul-->
+                 
               </div>
 
             </div>
@@ -305,12 +244,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Settings">
                 <span class="glyphicon glyphicon-cog" aria-hidden="true"></span>
               </a>
-              <!--a data-toggle="tooltip" data-placement="top" title="FullScreen">
-                <span class="glyphicon glyphicon-fullscreen" aria-hidden="true"></span>
-              </a>
-              <a data-toggle="tooltip" data-placement="top" title="Lock">
-                <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
-              </a-->
+           
               <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.jsp" >
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
@@ -418,45 +352,45 @@
 
         <!-- page content -->
         <div class="right_col" role="main">
-          <div class="col-md-8 col-sm-4 col-xs-6 tile_stats_count" style="align-items: center;">
-          <top tiles>
-          <div class="row tile_count">
-            <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total registered fullstack developers</span>
-              <div class="count">2737</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>4% </i> From last Week</span>
+            <div class="col-md-8 col-sm-4 col-xs-6 tile_stats_count" style="margin-left: 4%;">
+            <top tiles>
+            <div class="row tile_count">
+              <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total registered fullstack developers</span>
+                <div class="count">2737</div>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>4% </i> From last Week</span>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-clock-o"></i> Total job openings</span>
+                <div class="count">4535</div>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
+              </div>
+              <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total registered upto-date developers</span>
+                <div class="count green">1600</div>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>10% </i> From last Week</span>
+              </div>
+              <!--div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
+                <div class="count">4,567</div>
+                <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
+                <div class="count">2,315</div>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              </div>
+              <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
+                <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
+                <div class="count">7,325</div>
+                <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
+              </div-->
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-clock-o"></i> Total job openings</span>
-              <div class="count">4535</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>3% </i> From last Week</span>
             </div>
-            <div class="col-md-4 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total registered upto-date developers</span>
-              <div class="count green">1600</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>10% </i> From last Week</span>
-            </div>
-            <!--div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Females</span>
-              <div class="count">4,567</div>
-              <span class="count_bottom"><i class="red"><i class="fa fa-sort-desc"></i>12% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Collections</span>
-              <div class="count">2,315</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div>
-            <div class="col-md-2 col-sm-4 col-xs-6 tile_stats_count">
-              <span class="count_top"><i class="fa fa-user"></i> Total Connections</span>
-              <div class="count">7,325</div>
-              <span class="count_bottom"><i class="green"><i class="fa fa-sort-asc"></i>34% </i> From last Week</span>
-            </div-->
-          </div>
-          </div>
-          <!-- /top tiles -->
-
-          <div class="row"> 
-              <div class="col-md-7" >
+            <!-- /top tiles -->
+  
+            <div class="row"> 
+                <div class="col-md-7" >
                   <div class="x_panel">
   
                     <div class="row x_title">
@@ -464,237 +398,237 @@
                         <h3>Job postings </h3>
                         </div>
               
-                        <div style="width:100%;">
-                          <canvas id="canvas"></canvas>
-                      </div>
-                      <br>
-                      <br>
-  
-                    <button id="addDataset">Add Jobs</button>
-                    <button id="removeDataset">Reduce Jobs</button>
+                    </div>
+                    
+                    <div style="width:100%;">
+                        <canvas id="canvas"></canvas>
+                    </div>
+                    <br>
+                    <br>
+                  <div style="margin-left: 4%">
                     <button id="addData">Add Timeline</button>
                     <button id="removeData">Reduce Timeline</button>
-                      <script>
-                          var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
-                          var fe = [15,54,26,87,32,95,12,48,46,15,23,45];
-                          var qa = [54,32,64,15,43,49,19,12,54,32,61,15];
-                          var ba = [12,32,15,24,21,26,35,31,26,54,12,32];
-                          var ui = [32,31,64,35,64,15,16,5,4,46,21,14];
-                          var fs = [14,12,13,18,21,24,26,19,18,27,13,16];
-                          var gd = [16,14,18,24,29,35,34,31,28,27,20,15];
-                          var na = [32,31,22,24,45,26,31,15,18,19,16,14];
-                          var pt = [32,15,45,65,23,15,45,21,18,14,5,16];
-                          var randomScalingFactor = function() {
-                              return Math.round(Math.random() * 50 * (Math.random() > 0.5 ? 1 : 1)) + 50;
-                          };
-                          var randomColorFactor = function() {
-                              return Math.round(Math.random() * 255);
-                          };
-                          var randomColor = function(opacity) {
-                              return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
-                          };
-                  
-                          var config = {
-                              type: 'line',
-                              data: {
-                                  labels: ["January", "February", "March", "April", "May", "June", "July"],
-                                  datasets: [{
-                                      label: "Front End Developer",
-                                      data: fe,
-                                      fill: true,
-                                      borderDash: [5, 5],
-                                  }, {
-                                      label: "QA Engineer ",
-                                      data: qa,
-                                  },{
-                                      label: "Business Analyst ",
-                                      data: ba,
-                                  },{
-                                      label: "Data Analyst",
-                                      data: ui,
-                                  },{
-                                      label: "Full Stack Developer",
-                                      data: fs,
-                                  },{
-                                      label: "Graphic Designer",
-                                      data: gd,
-                                  },{
-                                      label: "Network Architect",
-                                      data: na,
-                                  }]
-                              },
-                              options: {
-                                  responsive: true,
-                                  title:{
-                                      display:true,
-                                     /* text:"Chart.js Line Chart - X-Axis Filter"*/
-                                  },
-                                  scales: {
-                                      xAxes: [{
-                                          display: true,
-                                          ticks: {
-                                              userCallback: function(dataLabel, index) {
-                                                  return index % 2 === 0 ? dataLabel : '';
-                                              }
-                                          }
-                                      }],
-                                      yAxes: [{
-                                          display: true,
-                                          beginAtZero: false
-                                      }]
-                                  }
-                              }
-                          };
-                  
-                          $.each(config.data.datasets, function(i, dataset) {
-                              dataset.borderColor = randomColor(0.4);
-                              dataset.backgroundColor = randomColor(0.5);
-                              dataset.pointBorderColor = randomColor(0.7);
-                              dataset.pointBackgroundColor = randomColor(0.5);
-                              dataset.pointBorderWidth = 1;
-                          });
-                  
-                          window.onload = function() {
-                              var ctx = document.getElementById("canvas").getContext("2d");
-                              window.myLine = new Chart(ctx, config);
-                          };
-                  
-                          $('#randomizeData').click(function() {
-                              $.each(config.data.datasets, function(i, dataset) {
-                                  dataset.data = dataset.data.map(function() {
-                                      return randomScalingFactor();
-                                  });
-                  
-                              });
-                  
-                              window.myLine.update();
-                          });
-                  
-                          $('#addDataset').click(function() {
-                              var newDataset = {
-                                  label: 'Dataset ' + config.data.datasets.length,
-                                  borderColor: randomColor(0.4),
-                                  backgroundColor: randomColor(0.5),
-                                  pointBorderColor: randomColor(0.7),
-                                  pointBackgroundColor: randomColor(0.5),
-                                  pointBorderWidth: 1,
-                                  data: [],
-                              };
-                  
-                              for (var index = 0; index < config.data.labels.length; ++index) {
-                                  newDataset.data.push(randomScalingFactor());
-                              }
-                  
-                              config.data.datasets.push(newDataset);
-                              window.myLine.update();
-                          });
-                  
-                          $('#addData').click(function() {
-                              if (config.data.datasets.length > 0) {
-                                  var month = MONTHS[config.data.labels.length % MONTHS.length];
-                                  config.data.labels.push(month);
-                  
-                                  for (var index = 0; index < config.data.datasets.length; ++index) {
-                                      config.data.datasets[index].data.push(randomScalingFactor());
-                                  }
-                  
-                                  window.myLine.update();
-                              }
-                          });
-                  
-                          $('#removeDataset').click(function() {
-                              config.data.datasets.splice(0, 1);
-                              window.myLine.update();
-                          });
-                  
-                          $('#removeData').click(function() {
-                              config.data.labels.splice(-1, 1); // remove the label first
-                  
-                              config.data.datasets.forEach(function(dataset, datasetIndex) {
-                                  dataset.data.pop();
-                              });
-                  
-                              window.myLine.update();
-                          });
-                      </script>
-                    </div>
+                  </div>
+                    <script>
+                        var MONTHS = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                        var fe = [15,54,26,87,32,95,12,48,46,15,23,45];
+                        var qa = [54,32,64,15,43,49,19,12,54,32,61,15];
+                        var ba = [12,32,15,24,21,26,35,31,26,54,12,32];
+                        var ui = [32,31,64,35,64,15,16,5,4,46,21,14];
+                        var fs = [14,12,13,18,21,24,26,19,18,27,13,16];
+                        var gd = [16,14,18,24,29,35,34,31,28,27,20,15];
+                        var na = [32,31,22,24,45,26,31,15,18,19,16,14];
+                        var pt = [32,15,45,65,23,15,45,21,18,14,5,16];
+                        var randomScalingFactor = function() {
+                            return Math.round(Math.random() * 50 * (Math.random() > 0.5 ? 1 : 1)) + 50;
+                        };
+                        var randomColorFactor = function() {
+                            return Math.round(Math.random() * 255);
+                        };
+                        var randomColor = function(opacity) {
+                            return 'rgba(' + randomColorFactor() + ',' + randomColorFactor() + ',' + randomColorFactor() + ',' + (opacity || '.3') + ')';
+                        };
+                
+                        var config = {
+                            type: 'line',
+                            data: {
+                                labels: ["January", "February", "March", "April", "May", "June", "July"],
+                                datasets: [{
+                                    label: "Front End Developer",
+                                    data: fe,
+                                    fill: true,
+                                    borderDash: [5, 5],
+                                }, {
+                                    label: "QA Engineer ",
+                                    data: qa,
+                                },{
+                                    label: "Business Analyst ",
+                                    data: ba,
+                                },{
+                                    label: "Data Analyst",
+                                    data: ui,
+                                },{
+                                    label: "Full Stack Developer",
+                                    data: fs,
+                                },{
+                                    label: "Graphic Designer",
+                                    data: gd,
+                                },{
+                                    label: "Network Architect",
+                                    data: na,
+                                }]
+                            },
+                            options: {
+                                responsive: true,
+                                title:{
+                                    display:true,
+                                   /* text:"Chart.js Line Chart - X-Axis Filter"*/
+                                },
+                                scales: {
+                                    xAxes: [{
+                                        display: true,
+                                        ticks: {
+                                            userCallback: function(dataLabel, index) {
+                                                return index % 2 === 0 ? dataLabel : '';
+                                            }
+                                        }
+                                    }],
+                                    yAxes: [{
+                                        display: true,
+                                        beginAtZero: false
+                                    }]
+                                }
+                            }
+                        };
+                
+                        $.each(config.data.datasets, function(i, dataset) {
+                            dataset.borderColor = randomColor(0.4);
+                            dataset.backgroundColor = randomColor(0.5);
+                            dataset.pointBorderColor = randomColor(0.7);
+                            dataset.pointBackgroundColor = randomColor(0.5);
+                            dataset.pointBorderWidth = 1;
+                        });
+                
+                        window.onload = function() {
+                            var ctx = document.getElementById("canvas").getContext("2d");
+                            window.myLine = new Chart(ctx, config);
+                        };
+                
+                        $('#randomizeData').click(function() {
+                            $.each(config.data.datasets, function(i, dataset) {
+                                dataset.data = dataset.data.map(function() {
+                                    return randomScalingFactor();
+                                });
+                
+                            });
+                
+                            window.myLine.update();
+                        });
+                
+                        $('#addDataset').click(function() {
+                            var newDataset = {
+                                label: 'Dataset ' + config.data.datasets.length,
+                                borderColor: randomColor(0.4),
+                                backgroundColor: randomColor(0.5),
+                                pointBorderColor: randomColor(0.7),
+                                pointBackgroundColor: randomColor(0.5),
+                                pointBorderWidth: 1,
+                                data: [],
+                            };
+                
+                            for (var index = 0; index < config.data.labels.length; ++index) {
+                                newDataset.data.push(randomScalingFactor());
+                            }
+                
+                            config.data.datasets.push(newDataset);
+                            window.myLine.update();
+                        });
+                
+                        $('#addData').click(function() {
+                            if (config.data.datasets.length > 0) {
+                                var month = MONTHS[config.data.labels.length % MONTHS.length];
+                                config.data.labels.push(month);
+                
+                                for (var index = 0; index < config.data.datasets.length; ++index) {
+                                    config.data.datasets[index].data.push(randomScalingFactor());
+                                }
+                
+                                window.myLine.update();
+                            }
+                        });
+                
+                        $('#removeDataset').click(function() {
+                            config.data.datasets.splice(0, 1);
+                            window.myLine.update();
+                        });
+                
+                        $('#removeData').click(function() {
+                            config.data.labels.splice(-1, 1); // remove the label first
+                
+                            config.data.datasets.forEach(function(dataset, datasetIndex) {
+                                dataset.data.pop();
+                            });
+                
+                            window.myLine.update();
+                        });
+                    </script>
                   </div>
                 </div>
-                  </div>
-                  <div class="col-md-5 col-sm-4 col-xs-12">
-                      <div class="x_panel" id="canvas">
-                        <div class="x_title">
-                          <h2>What's new <small>Read now</small></h2>
-                          
-                          <div class="clearfix"></div>
-                        </div>
-                        <div class="x_content" style="overflow: auto; box-sizing: border-box;max-height: 366px; overflow-y: scroll;">
-                          <div class="dashboard-widget-content" >
-              
-                            <ul class="list-unstyled timeline widget">
-                              <li>
-                                <div class="block">
-                                  <div class="block_content">
-                                    <h2 class="title">
-                                                      <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
-                                                  </h2>
-                                    <div class="byline">
-                                      <span>Jay Raj</span> on <a>Sitepoint</a>
+                    
+                    <div class="col-md-5 col-sm-4 col-xs-12">
+                        <div class="x_panel" id="canvas">
+                          <div class="x_title">
+                            <h2>What's new <small>Read now</small></h2>
+                            
+                            <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content" style="overflow: auto; box-sizing: border-box;max-height: 366px; overflow-y: scroll;">
+                            <div class="dashboard-widget-content" >
+                
+                              <ul class="list-unstyled timeline widget">
+                                <li>
+                                  <div class="block">
+                                    <div class="block_content">
+                                      <h2 class="title">
+                                                        <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
+                                                    </h2>
+                                      <div class="byline">
+                                        <span>Jay Raj</span> on <a>Sitepoint</a>
+                                      </div>
+                                      <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
+                                      </p>
                                     </div>
-                                    <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
-                                    </p>
                                   </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="block">
-                                  <div class="block_content">
-                                    <h2 class="title">
-                                                      <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
-                                                  </h2>
-                                    <div class="byline">
-                                      <span>Nisha Talagala</span> on <a>Forbes</a>
+                                </li>
+                                <li>
+                                  <div class="block">
+                                    <div class="block_content">
+                                      <h2 class="title">
+                                                        <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
+                                                    </h2>
+                                      <div class="byline">
+                                        <span>Nisha Talagala</span> on <a>Forbes</a>
+                                      </div>
+                                      <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
+                                      </p>
                                     </div>
-                                    <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
-                                    </p>
                                   </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="block">
-                                  <div class="block_content">
-                                    <h2 class="title">
-                                                      <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
-                                                  </h2>
-                                    <div class="byline">
-                                      <span>Jay Raj</span> on <a>Sitepoint</a>
+                                </li>
+                                <li>
+                                  <div class="block">
+                                    <div class="block_content">
+                                      <h2 class="title">
+                                                        <a href="https://www.sitepoint.com/introduction-mean-stack/">An Introduction to the MEAN Stack</a>
+                                                    </h2>
+                                      <div class="byline">
+                                        <span>Jay Raj</span> on <a>Sitepoint</a>
+                                      </div>
+                                      <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
+                                      </p>
                                     </div>
-                                    <p class="excerpt">The term MEAN stack refers to a collection of JavaScript based technologies used to develop web applications. MEAN is an acronym for MongoDB, ExpressJS, AngularJS and Node.js. From client to server to database, MEAN is full stac… <a href="https://www.sitepoint.com/introduction-mean-stack/">Read&nbsp;More</a>
-                                    </p>
                                   </div>
-                                </div>
-                              </li>
-                              <li>
-                                <div class="block">
-                                  <div class="block_content">
-                                    <h2 class="title">
-                                                      <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
-                                                  </h2>
-                                    <div class="byline">
-                                      <span>Nisha Talagala</span> on <a>Forbes</a>
+                                </li>
+                                <li>
+                                  <div class="block">
+                                    <div class="block_content">
+                                      <h2 class="title">
+                                                        <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">The Full Stack Data Scientist: Myth, Unicorn, or New Normal?</a>
+                                                    </h2>
+                                      <div class="byline">
+                                        <span>Nisha Talagala</span> on <a>Forbes</a>
+                                      </div>
+                                      <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
+                                      </p>
                                     </div>
-                                    <p class="excerpt">As AI proliferates and more and more industries try to beef up their data scientist teams, a new concept has been emerging - the “Full Stack Data Scientist”. What is this new role? What should an organization do about it?… <a href="https://www.forbes.com/sites/cognitiveworld/2019/09/11/the-full-stack-data-scientist-myth-unicorn-or-new-normal/#1aebcbf62c60">Read&nbsp;More</a>
-                                    </p>
                                   </div>
-                                </div>
-                              </li>
-                            </ul>
+                                </li>
+                              </ul>
+                            </div>
                           </div>
                         </div>
                       </div>
                     </div>
-                  </div>
-          <div class="row">
+            <div class="row">
               <div class="col-md-12">
                   <div class="x_panel">
                       <div class="x_title">
@@ -723,493 +657,85 @@
   
                     </div>
                     </div>
-              </div>
-        </div>
-          <div class="row">
-                  <div class="col-md-6">
-                    <div class="x_panel">
-                  
-                      <div class="x_title">
-                        <h2>Top Comanies Hiring Now</h2>
-                        <div class="clearfix"></div>
-                      </div>
-                      <h5><img src="HomeAssets/images/WSO2.png" height="26px" width="60px"></h5>
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-warning" data-transitiongoal="<%=w%>"><font size="3px"><%=w%>%</font></div>
-                      </div>
-                      <h5><img src="HomeAssets/images/dialog.png" height="26px" width="50px"></h5>
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-danger" data-transitiongoal="<%=d%>"><font size="3px"><%=d%>%</font></div>
-                      </div>
-                      <h5><img src="HomeAssets/images/codegen.jpg" height="26px" width="86px"></h5>
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-info" data-transitiongoal="<%=c%>"><font size="3px"><%=c%>%</font></div>
-                      </div>
-                      <h5><img src="HomeAssets/images/99x.png" height="26px" width="90px"></h5>
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-danger" data-transitiongoal="<%=x%>"><font size="3px"><%=x%>%</font></div>
-                      </div>
-                      <h5><img src="HomeAssets/images/lseg.png" height="26px" width="100px"></h5>
-                      <div class="progress">
-                        <div class="progress-bar progress-bar-warning" data-transitiongoal="<%=l%>"><font size="3px"><%=l%>%</font></div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="col-md-6 col-sm-12 col-xs-12">
+              </div> 
+          </div>
+            <div class="row">
+                    <div class="col-md-6">
                       <div class="x_panel">
+                    
                         <div class="x_title">
-                          <h2>Find Jobs <small>In Sri Lanka</small></h2>
-                            <div class="clearfix"></div>
+                          <h2>Top Comanies Hiring Now</h2>
+                          <div class="clearfix"></div>
                         </div>
-                        <div class="x_content">
-                          <div class="dashboard-widget-content">
-                            <div class="col-md-4 hidden-small">
-                              <h2 class="line_30">From almost 1000 entries</h2>
-    
-                              <table class="countries_list">
-                                <tbody>
-                                  <tr>
-                                    <td>United States</td>
-                                    <td class="fs15 fw700 text-right">33%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>France</td>
-                                    <td class="fs15 fw700 text-right">27%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Germany</td>
-                                    <td class="fs15 fw700 text-right">16%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Spain</td>
-                                    <td class="fs15 fw700 text-right">11%</td>
-                                  </tr>
-                                  <tr>
-                                    <td>Britain</td>
-                                    <td class="fs15 fw700 text-right">10%</td>
-                                  </tr>
-                                </tbody>
-                              </table>
+                        <h5><img src="HomeAssets/images/wso2.png" height="26px" width="60px"></h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-warning" data-transitiongoal="80"><font size="3px">80%</font></div>
+                        </div>
+                        <h5><img src="HomeAssets/images/dialog.png" height="26px" width="50px"></h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-danger" data-transitiongoal="60"><font size="3px">60%</font></div>
+                        </div>
+                        <h5><img src="HomeAssets/images/codegen.jpg" height="26px" width="86px"></h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-info" data-transitiongoal="65"><font size="3px">65%</font></div>
+                        </div>
+                        <h5><img src="HomeAssets/images/99x.png" height="26px" width="90px"></h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-danger" data-transitiongoal="76"><font size="3px">76%</font></div>
+                        </div>
+                        <h5><img src="HomeAssets/images/lseg.png" height="26px" width="100px"></h5>
+                        <div class="progress">
+                          <div class="progress-bar progress-bar-warning" data-transitiongoal="60"><font size="3px">60%</font></div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col-md-6 col-sm-12 col-xs-12">
+                        <div class="x_panel">
+                          <div class="x_title">
+                            <h2>Find Jobs <small>In Sri Lanka</small></h2>
+                              <div class="clearfix"></div>
+                          </div>
+                          <div class="x_content">
+                            <div class="dashboard-widget-content">
+                              <div class="col-md-4 hidden-small">
+                                <h2 class="line_30">From almost 1000 entries</h2>
+      
+                                <table class="countries_list">
+                                  <tbody>
+                                    <tr>
+                                      <td>Colombo</td>
+                                      <td class="fs15 fw700 text-right">33%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Nuwara Eliya</td>
+                                      <td class="fs15 fw700 text-right">27%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Matara</td>
+                                      <td class="fs15 fw700 text-right">16%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Galle</td>
+                                      <td class="fs15 fw700 text-right">11%</td>
+                                    </tr>
+                                    <tr>
+                                      <td>Hambantota</td>
+                                      <td class="fs15 fw700 text-right">10%</td>
+                                    </tr>
+                                  </tbody>
+                                </table>
+                              </div>
+                              <!-- <div id="world-map-gdp" class="col-md-8 col-sm-12 col-xs-12" style="height:230px;"></div> -->
+                              <img src="HomeAssets/images/lanka.png" style="width:auto;height:360px">
                             </div>
-                            <div id="world-map-gdp" class="col-md-8 col-sm-12 col-xs-12" style="height:230px;"></div>
                           </div>
                         </div>
                       </div>
-                    </div>
-          <!--
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
-                <div class="x_title">
-                  <h2>App Versions</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
                 </div>
-                <div class="x_content">
-                  <h4>App Usage across versions</h4>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.2</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 66%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>123k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.3</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 45%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>53k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.4</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 25%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>23k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.5</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 5%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>3k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-                  <div class="widget_summary">
-                    <div class="w_left w_25">
-                      <span>0.1.5.6</span>
-                    </div>
-                    <div class="w_center w_55">
-                      <div class="progress">
-                        <div class="progress-bar bg-green" role="progressbar" aria-valuenow="60" aria-valuemin="0" aria-valuemax="100" style="width: 2%;">
-                          <span class="sr-only">60% Complete</span>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="w_right w_20">
-                      <span>1k</span>
-                    </div>
-                    <div class="clearfix"></div>
-                  </div>
-
-                </div>
-              </div>
-            </div>
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320 overflow_hidden">
-                <div class="x_title">
-                  <h2>Device Usage</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <table class="" style="width:100%">
-                    <tr>
-                      <th style="width:37%;">
-                        <p>Top 5</p>
-                      </th>
-                      <th>
-                        <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7">
-                          <p class="">Device</p>
-                        </div>
-                        <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5">
-                          <p class="">Progress</p>
-                        </div>
-                      </th>
-                    </tr>
-                    <tr>
-                      <td>
-                        <canvas class="canvasDoughnut" height="140" width="140" style="margin: 15px 10px 10px 0"></canvas>
-                      </td>
-                      <td>
-                        <table class="tile_info">
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square blue"></i>IOS </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square green"></i>Android </p>
-                            </td>
-                            <td>10%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square purple"></i>Blackberry </p>
-                            </td>
-                            <td>20%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square aero"></i>Symbian </p>
-                            </td>
-                            <td>15%</td>
-                          </tr>
-                          <tr>
-                            <td>
-                              <p><i class="fa fa-square red"></i>Others </p>
-                            </td>
-                            <td>30%</td>
-                          </tr>
-                        </table>
-                      </td>
-                    </tr>
-                  </table>
-                </div>
-              </div>
-            </div>
-
-
-            <div class="col-md-4 col-sm-4 col-xs-12">
-              <div class="x_panel tile fixed_height_320">
-                <div class="x_title">
-                  <h2>Quick Settings</h2>
-                  <ul class="nav navbar-right panel_toolbox">
-                    <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                    </li>
-                    <li class="dropdown">
-                      <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                      <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Settings 1</a>
-                        </li>
-                        <li><a href="#">Settings 2</a>
-                        </li>
-                      </ul>
-                    </li>
-                    <li><a class="close-link"><i class="fa fa-close"></i></a>
-                    </li>
-                  </ul>
-                  <div class="clearfix"></div>
-                </div>
-                <div class="x_content">
-                  <div class="dashboard-widget-content">
-                    <ul class="quick-list">
-                      <li><i class="fa fa-calendar-o"></i><a href="#">Settings</a>
-                      </li>
-                      <li><i class="fa fa-bars"></i><a href="#">Subscription</a>
-                      </li>
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
-                      <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
-                      </li>
-                      <li><i class="fa fa-bar-chart"></i><a href="#">Auto Renewal</a> </li>
-                      <li><i class="fa fa-line-chart"></i><a href="#">Achievements</a>
-                      </li>
-                      <li><i class="fa fa-area-chart"></i><a href="#">Logout</a>
-                      </li>
-                    </ul>
-
-                    <div class="sidebar-widget">
-                        <h4>Profile Completion</h4>
-                        <canvas width="150" height="80" id="chart_gauge_01" class="" style="width: 160px; height: 100px;"></canvas>
-                        <div class="goal-wrapper">
-                          <span id="gauge-text" class="gauge-value pull-left">0</span>
-                          <span class="gauge-value pull-left">%</span>
-                          <span id="goal-text" class="goal-value pull-right">100%</span>
-                        </div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-          </div-->
-
-
-          
-                <!-- Start to do list >
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>To Do List <small>Sample tasks</small></h2>
-                      <ul class="nav navbar-right panel_toolbox">
-                        <li><a class="collapse-link"><i class="fa fa-chevron-up"></i></a>
-                        </li>
-                        <li class="dropdown">
-                          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false"><i class="fa fa-wrench"></i></a>
-                          <ul class="dropdown-menu" role="menu">
-                            <li><a href="#">Settings 1</a>
-                            </li>
-                            <li><a href="#">Settings 2</a>
-                            </li>
-                          </ul>
-                        </li>
-                        <li><a class="close-link"><i class="fa fa-close"></i></a>
-                        </li>
-                      </ul>
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-
-                      <div class="">
-                        <ul class="to_do">
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Schedule meeting with new client </p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Create email address for new intern</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Food truck fixie locavors mcsweeney</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Create email address for new intern</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Have IT fix the network printer</p>
-                          </li>
-                          <li>
-                            <p>
-                              <input type="checkbox" class="flat"> Copy backups to offsite location</p>
-                          </li>
-                        </ul>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <!-- End to do list -->
-                
-                <!-- start of weather widget >
-                <div class="col-md-6 col-sm-6 col-xs-12">
-                  <div class="x_panel">
-                    <div class="x_title">
-                      <h2>Weather <small>Sessions</small></h2>
-                      
-                      <div class="clearfix"></div>
-                    </div>
-                    <div class="x_content">
-                      <div class="row">
-                        <div class="col-sm-12">
-                          <div class="temperature"><b>Monday</b>, 07:30 AM
-                            <span>F</span>
-                            <span><b>C</b></span>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="row">
-                        <div class="col-sm-4">
-                          <div class="weather-icon">
-                            <canvas height="84" width="84" id="partly-cloudy-day"></canvas>
-                          </div>
-                        </div>
-                        <div class="col-sm-8">
-                          <div class="weather-text">
-                            <h2>Colombo <br><i>Partly Cloudy Day</i></h2>
-                          </div>
-                        </div>
-                      </div>
-                      <div class="col-sm-12">
-                        <div class="weather-text pull-right">
-                          <h3 class="degrees">23</h3>
-                        </div>
-                      </div>
-
-                      <div class="clearfix"></div>
-
-                      <div class="row weather-days">
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Mon</h2>
-                            <h3 class="degrees">25</h3>
-                            <canvas id="clear-day" width="32" height="32"></canvas>
-                            <h5>15 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Tue</h2>
-                            <h3 class="degrees">25</h3>
-                            <canvas height="32" width="32" id="rain"></canvas>
-                            <h5>12 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Wed</h2>
-                            <h3 class="degrees">27</h3>
-                            <canvas height="32" width="32" id="snow"></canvas>
-                            <h5>14 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Thu</h2>
-                            <h3 class="degrees">28</h3>
-                            <canvas height="32" width="32" id="sleet"></canvas>
-                            <h5>15 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Fri</h2>
-                            <h3 class="degrees">28</h3>
-                            <canvas height="32" width="32" id="wind"></canvas>
-                            <h5>11 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="col-sm-2">
-                          <div class="daily-weather">
-                            <h2 class="day">Sat</h2>
-                            <h3 class="degrees">26</h3>
-                            <canvas height="32" width="32" id="cloudy"></canvas>
-                            <h5>10 <i>km/h</i></h5>
-                          </div>
-                        </div>
-                        <div class="clearfix"></div>
-                      </div>
-                    </div>
-                  </div>
-
-                </div>
-                <!-- end of weather widget -->
               </div>
             </div>
           </div>
-        </div>
-        <!-- /page content -->
+          <!-- /page content -->
 
         <!-- footer content -->
         <footer>
