@@ -1,3 +1,16 @@
+<%@ page language="java" contentType="text/html; charset=ISO-8859-1"
+    pageEncoding="ISO-8859-1"%>
+    
+    <%@page import="com.onvs.servlet.EditUserServlet"%>
+
+
+<%@ page import="com.onvs.util.DBConnection"%>
+<%@ page import ="java.sql.Connection"%>
+    
+<%@ page import ="java.sql.ResultSet"%>
+    
+<%@ page import ="java.sql.Statement"%>
+    
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -30,57 +43,60 @@
     
 	  <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar bg-dark ftco-navbar-light" id="ftco-navbar">
 	    <div class="container-fluid px-md-4	">
-                <a class="navbar-brand" href="index.jsp"><img src="HomeAssets/images/Career Master.png" height="56px">Career Master</a>
+                <a class="navbar-brand" href="index.jsp"><img src="HomeAssets/images/Career Master Vert.png" height="56px"></a>
 	      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
 	        <span class="oi oi-menu"></span> Menu
 	      </button>
 
 	      <div class="collapse navbar-collapse" id="ftco-nav">
 	        <ul class="navbar-nav ml-auto">
-	          <li class="nav-item"><a href="index.html" class="nav-link">Home</a></li><%
-	          String link,linkdash="index.jsp",visi="block",visil="block",visij="bloack",lo="none";
-	          
-	          if(session.getAttribute( "Admin" )==null){
-	        	  
-	        	  link="LoginWelcome.jsp";
-	        	  visil="block";
-	        	  lo="none";
-	        	  
-	        	  
-	          }else{
-	        	  
-	        	  if(session.getAttribute( "type" )=="2"){
-	        	  
-	        		
-	        	  linkdash="JobHostDashBoard.jsp";
-	        	  link="addJob.jsp";
-	        	  visi="block";
-	        	  visil="none";
-	        	  visij="none";
-	        	  lo="block";
-	        	  }
-	        	  
-	        	  else{
-	        		  
-	        		  linkdash="UserDashBoard.jsp";
-	        		  link="LoginWelcome.jsp";
-	        		  visi="none";
-	        		  visil="none";
-	        		  visij="block";
-	        		  lo="block";
-	        	  }
-	          }
+                    <li class="nav-item "><a href="index.jsp" class="nav-link">Home</a></li>
 	          
 	          
-	          %>
-	          <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
-	          <li class="nav-item cta mr-md-1"><a href="<%=link %>" class="nav-link" style="display:<%=visi %>;">Post a Job</a></li>
-			  <li class="nav-item cta cta-colored"><a href="browseJobs.jsp" class="nav-link" style="display:<%=visij %>;">Want a Job</a></li>
-			  <li class="nav-item cta mr-md-2" style="margin-left: 4px;"><a href="LoginWelcome.jsp" class="nav-link" style="display:<%=visil %>;">Login</a></li>
-			  <li class="nav-item cta mr-md-2" style="margin-left: 4px;"><a href="<%=linkdash %>" class="nav-link" style="display:<%=lo %>;">My Dashboard</a></li>
-			  <li class="nav-item cta mr-md-2" ><a href="SignupWelcome.jsp" class="nav-link" style="display:<%=visil %>;">SignUp</a></li>
-			  <li class="nav-item" style="margin-left: 4px;">
-			  <form action="SignOutServlet" method="post"><input type="submit" value="LogOut" class="btn btn-danger" style="margin-top: 7px; display:<%=lo %>;"></form></li>
+                    <%
+                    String link,linkdash="index.jsp",visi="block",visil="block",visij="bloack",lo="none";
+                    
+                    if(session.getAttribute( "Admin" )==null){
+                        
+                        link="LoginWelcome.jsp";
+                        visil="block";
+                        lo="none";
+                        
+                        
+                    }else{
+                        
+                        if(session.getAttribute( "type" )=="2"){
+                        
+                          
+                        linkdash="JobHostDashBoard.jsp";
+                        link="addJob.jsp";
+                        visi="block";
+                        visil="none";
+                        visij="none";
+                        lo="block";
+                        }
+                        
+                        else{
+                            
+                            linkdash="UserDashBoard.jsp";
+                            link="LoginWelcome.jsp";
+                            visi="none";
+                            visil="none";
+                            visij="block";
+                            lo="block";
+                        }
+                    }
+                    
+                    
+                    %>
+                    <li class="nav-item active"><a href="contact.jsp" class="nav-link">Contact</a></li>
+                    <li class="nav-item cta mr-md-1"><a href="<%=link %>" class="nav-link" style="display:<%=visi %>;">Post a Job</a></li>
+                    <li class="nav-item cta cta-colored"><a href="browseJobs.jsp" class="nav-link" style="display:<%=visij %>;">Want a Job</a></li>
+                    <li class="nav-item cta mr-md-2" style="margin-left: 4px;"><a href="LoginWelcome.jsp" class="nav-link" style="display:<%=visil %>;">Login</a></li>
+                    <li class="nav-item cta mr-md-2" style="margin-left: 4px;"><a href="<%=linkdash %>" class="nav-link" style="display:<%=lo %>;">My Dashboard</a></li>
+                    <li class="nav-item cta mr-md-2" ><a href="SignupWelcome.jsp" class="nav-link" style="display:<%=visil %>;">SignUp</a></li>
+                    <li class="nav-item" style="margin-left: 4px;">
+                    <form action="SignOutServlet" method="post"><input type="submit" value="LogOut" class="btn btn-danger" style="margin-top: 7px; display:<%=lo %>;"></form></li>
 
 	        </ul>
 	      </div>
@@ -88,7 +104,7 @@
 	  </nav>
     <!-- END nav -->
     
-    <div class="hero-wrap hero-wrap-2" style="background-image: url('HomeAssets/images/bg_1.jpg');" data-stellar-background-ratio="0.5">
+    <div class="hero-wrap hero-wrap-2" style="background-image: url('images/bg_1.jpg');" data-stellar-background-ratio="0.5">
       <div class="overlay"></div>
       <div class="container">
         <div class="row no-gutters slider-text align-items-end justify-content-start">
@@ -580,8 +596,8 @@ section .section-title {
         <div class="row mb-5">
         	<div class="col-md">
              <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Career Master</h2>
-              <p>Career Master is a Platform where </p>
+              
+              <p>Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
               <ul class="ftco-footer-social list-unstyled float-md-left float-lft mt-3">
                 <li class="ftco-animate"><a href="#"><span class="icon-twitter"></span></a></li>
                 <li class="ftco-animate"><a href="#"><span class="icon-facebook"></span></a></li>
@@ -591,26 +607,27 @@ section .section-title {
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4">
-              <h2 class="ftco-heading-2">Job Host</h2>
+              <h2 class="ftco-heading-2">Employers</h2>
               <ul class="list-unstyled">
-               
-                <li><a href="addJob.jsp" class="pb-1 d-block">Post a Job</a></li>
-                
-                <li><a href="JobHostDashBoard.jsp" class="pb-1 d-block">Dashboard</a></li>
-                
+                <li><a href="#" class="pb-1 d-block">Browse Candidates</a></li>
+                <li><a href="#" class="pb-1 d-block">Post a Job</a></li>
+                <li><a href="#" class="pb-1 d-block">Employer Listing</a></li>
+                <li><a href="#" class="pb-1 d-block">Resume Page</a></li>
+                <li><a href="#" class="pb-1 d-block">Dashboard</a></li>
+                <li><a href="#" class="pb-1 d-block">Job Packages</a></li>
               </ul>
             </div>
           </div>
           <div class="col-md">
             <div class="ftco-footer-widget mb-4 ml-md-4">
-              <h2 class="ftco-heading-2">Career Seeker</h2>
+              <h2 class="ftco-heading-2">Candidate</h2>
               <ul class="list-unstyled">
-                <li><a href="browseJobs.jsp" class="pb-1 d-block">Browse Jobs</a></li>
-                
-                <li><a href="UserDashBoard.jsp" class="pb-1 d-block">Dashboard</a></li>
-                
-                
-                
+                <li><a href="#" class="pb-1 d-block">Browse Jobs</a></li>
+                <li><a href="#" class="pb-1 d-block">Submit Resume</a></li>
+                <li><a href="#" class="pb-1 d-block">Dashboard</a></li>
+                <li><a href="#" class="pb-1 d-block">Browse Categories</a></li>
+                <li><a href="#" class="pb-1 d-block">My Bookmarks</a></li>
+                <li><a href="#" class="pb-1 d-block">Candidate Listing</a></li>
               </ul>
             </div>
           </div>
@@ -618,10 +635,10 @@ section .section-title {
             <div class="ftco-footer-widget mb-4 ml-md-4">
               <h2 class="ftco-heading-2">Account</h2>
               <ul class="list-unstyled">
-                <li><a href="UserDashBoard.jsp" class="pb-1 d-block">My Account</a></li>
-                <li><a href="LoginWelcome.jsp" class="pb-1 d-block">Log In</a></li>
-                <li><a href="SignupWelcome.jsp" class="pb-1 d-block">Create Account</a></li>
-                
+                <li><a href="#" class="pb-1 d-block">My Account</a></li>
+                <li><a href="#" class="pb-1 d-block">Sign In</a></li>
+                <li><a href="#" class="pb-1 d-block">Create Account</a></li>
+                <li><a href="#" class="pb-1 d-block">Checkout</a></li>
               </ul>
             </div>
           </div>
@@ -630,25 +647,19 @@ section .section-title {
             	<h2 class="ftco-heading-2">Have a Questions?</h2>
             	<div class="block-23 mb-3">
 	              <ul>
-	                <li><span class="icon icon-map-marker"></span><span class="text">No 23, High Level Road, Gamsaba Handiya,<br>Nugegoda, <br>Sri Lanka</span></li>
-	                <li><span class="icon icon-phone"></span><span class="text">+94 071 4009 185</span></li>
-	                <li><span class="icon icon-envelope"></span><span class="text">info@careermaster.com</span></li>
+	                <li><span class="icon icon-map-marker"></span><span class="text">203 Fake St. Mountain View, San Francisco, California, USA</span></li>
+	                <li><a href="#"><span class="icon icon-phone"></span><span class="text">+2 392 3929 210</span></a></li>
+	                <li><a href="#"><span class="icon icon-envelope"></span><span class="text">info@yourdomain.com</span></a></li>
 	              </ul>
 	            </div>
             </div>
           </div>
         </div>
         <div class="row">
-          <div class="col-md-12 text-center">
-
-            <p>
-  Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | Career Master
-  <!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
-          </div>
+        
         </div>
       </div>
     </footer>
-    
     
   
 
@@ -656,21 +667,21 @@ section .section-title {
   <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
 
 
-  <script src="js/jquery.min.js"></script>
-  <script src="js/jquery-migrate-3.0.1.min.js"></script>
-  <script src="js/popper.min.js"></script>
-  <script src="js/bootstrap.min.js"></script>
-  <script src="js/jquery.easing.1.3.js"></script>
-  <script src="js/jquery.waypoints.min.js"></script>
-  <script src="js/jquery.stellar.min.js"></script>
-  <script src="js/owl.carousel.min.js"></script>
-  <script src="js/jquery.magnific-popup.min.js"></script>
-  <script src="js/aos.js"></script>
-  <script src="js/jquery.animateNumber.min.js"></script>
-  <script src="js/scrollax.min.js"></script>
+  <script src="HomeAssets/js/jquery.min.js"></script>
+  <script src="HomeAssets/js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="HomeAssets/js/popper.min.js"></script>
+  <script src="HomeAssets/js/bootstrap.min.js"></script>
+  <script src="HomeAssets/js/jquery.easing.1.3.js"></script>
+  <script src="HomeAssets/js/jquery.waypoints.min.js"></script>
+  <script src="HomeAssets/js/jquery.stellar.min.js"></script>
+  <script src="HomeAssets/js/owl.carousel.min.js"></script>
+  <script src="HomeAssets/js/jquery.magnific-popup.min.js"></script>
+  <script src="HomeAssets/js/aos.js"></script>
+  <script src="HomeAssets/js/jquery.animateNumber.min.js"></script>
+  <script src="HomeAssets/js/scrollax.min.js"></script>
   <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBVWaKrjvy3MaE7SQ74_uJiULgl1JY0H2s&sensor=false"></script>
-  <script src="js/google-map.js"></script>
-  <script src="js/main.js"></script>
+  <script src="HomeAssets/js/google-map.js"></script>
+  <script src="HomeAssets/js/main.js"></script>
     
   </body>
 </html>
