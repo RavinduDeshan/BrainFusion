@@ -136,9 +136,9 @@
 		    				<div class="team d-md-flex p-4 bg-white">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_2.jpg);"></div>
 		        			<div class="text pl-md-4">
-		        				<span class="location mb-0">Western City, UK</span>
+		        				<span class="location mb-0">University of Moratuwa</span>
 		        				<h2>Danica Lewis</h2>
-			        			<span class="position">Graduate</span>
+			        			<span class="position">Hardware System Expert</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
 			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
@@ -149,9 +149,9 @@
 		    				<div class="team d-md-flex p-4 bg-white">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_3.jpg);"></div>
 		        			<div class="text pl-md-4">
-		        				<span class="location mb-0">Western City, UK</span>
+		        				<span class="location mb-0">University of Moratuwa</span>
 		        				<h2>Danica Lewis</h2>
-			        			<span class="position">Graduate</span>
+			        			<span class="position">Financial Expert</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
 			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
@@ -162,9 +162,9 @@
 		    				<div class="team d-md-flex p-4 bg-white">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_4.jpg);"></div>
 		        			<div class="text pl-md-4">
-		        				<span class="location mb-0">Western City, UK</span>
+		        				<span class="location mb-0">University of Jayawardanpura</span>
 		        				<h2>Danica Lewis</h2>
-			        			<span class="position">Graduate</span>
+			        			<span class="position">Marketing Expert</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
 			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
@@ -175,9 +175,9 @@
 		    				<div class="team d-md-flex p-4 bg-white">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_5.jpg);"></div>
 		        			<div class="text pl-md-4">
-		        				<span class="location mb-0">Western City, UK</span>
+		        				<span class="location mb-0">Virtusa Sri Lanka</span>
 		        				<h2>Danica Lewis</h2>
-			        			<span class="position">Graduate</span>
+			        			<span class="position">Requirement Analyzing Expert</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
 			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
@@ -188,9 +188,9 @@
 		    				<div class="team d-md-flex p-4 bg-white">
 		        			<div class="img" style="background-image: url(HomeAssets/images/person_6.jpg);"></div>
 		        			<div class="text pl-md-4">
-		        				<span class="location mb-0">Western City, UK</span>
+		        				<span class="location mb-0">Orange IT</span>
 		        				<h2>Danica Lewis</h2>
-			        			<span class="position">Graduate</span>
+			        			<span class="position">Software Expert</span>
 			        			<p class="mb-2">Far far away, behind the word mountains, far from the countries Vokalia and Consonantia, there live the blind texts.</p>
 			        			<span class="seen">Last Activity 4 months ago</span>
 			        			<p><a href="#" class="btn btn-primary">Appoint</a></p>
@@ -234,7 +234,7 @@
 		        </div>
 
 		        <div class="sidebar-box bg-white p-4 ftco-animate">
-		        	<h3 class="heading-sidebar">Select Location</h3>
+		        	<h3 class="heading-sidebar">Select Work Location</h3>
 		        	<form action="#" class="search-form mb-3">
                 <div class="form-group">
                   <span class="icon icon-search"></span>
@@ -251,17 +251,7 @@
 							</form>
 		        </div>
 
-		        <div class="sidebar-box bg-white p-4 ftco-animate">
-		        	<h3 class="heading-sidebar">Job Type</h3>
-		        	<form action="#" class="browse-form">
-							  <label for="option-job-type-1"><input type="checkbox" id="option-job-type-1" name="vehicle" value="" checked> Partime</label><br>
-							  <label for="option-job-type-2"><input type="checkbox" id="option-job-type-2" name="vehicle" value=""> Fulltime</label><br>
-							  <label for="option-job-type-3"><input type="checkbox" id="option-job-type-3" name="vehicle" value=""> Intership</label><br>
-							  <label for="option-job-type-4"><input type="checkbox" id="option-job-type-4" name="vehicle" value=""> Temporary</label><br>
-							  <label for="option-job-type-5"><input type="checkbox" id="option-job-type-5" name="vehicle" value=""> Freelance</label><br>
-							  <label for="option-job-type-6"><input type="checkbox" id="option-job-type-6" name="vehicle" value=""> Fixed</label><br>
-							</form>
-		        </div>
+		       
 		      </div>
     		</div>
     	</div>

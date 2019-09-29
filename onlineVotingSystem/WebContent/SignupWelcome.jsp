@@ -61,8 +61,8 @@
       <br>
       <br>
       <br>
-      <div id="extracon1" style="display: none;">If you are a  Career Seeker Sign Up from here</div>
-      <div id="extracon2" style="display: none;">If you are a Job Host Company Sign Up from here</div>
+      <div id="extracon2" style="display: none;">If you are a  Career Seeker Sign Up from here</div>
+      <div id="extracon1" style="display: none;">If you are a Job Host Company Sign Up from here</div>
    </div>
     
     <br>
