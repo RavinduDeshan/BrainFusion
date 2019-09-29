@@ -15,12 +15,12 @@
 <html lang="en">
 
   <head>
-        <%
-        if(session.getAttribute("type") !="1") {
-            response.sendRedirect("index.jsp");
-        }
-        
-        %>
+      <%
+      if(session.getAttribute("type") !="1") {
+          response.sendRedirect("index.jsp");
+      }
+      
+      %>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -106,11 +106,11 @@
                     <div class="divTableCel2">
                       <div class="collapse navbar1-collapse" id="ftco-nav">
                         <ul class="navbar1-nav ml-auto">
-                          <li class="nav-item "><a href="index.jsp" class="nav-link">Home</a></li>
-                          <li class="nav-item"><a href="browseJobs.jsp" class="nav-link">Browse Jobs</a></li>
-                          <li class="nav-item"><a href="candidates.jsp" class="nav-link">Experts</a></li>
-                          <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
-                          <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
+                            <li class="nav-item "><a href="index.jsp" class="nav-link">Home</a></li>
+                            <li class="nav-item"><a href="browseJobs.jsp" class="nav-link">Browse Jobs</a></li>
+                            <li class="nav-item"><a href="candidates.jsp" class="nav-link">Experts</a></li>
+                            <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
+                            <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
             
               
                         </ul>
@@ -131,42 +131,42 @@
         <div class="col-md-3 left_col">
           <div class="left_col scroll-view">
             <!--div class="navbar nav_title" style="border: 0;">
-              <a href="dashboard.jsp" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
+              <a href="dashboard.html" class="site_title"><i class="fa fa-paw"></i> <span>Gentelella Alela!</span></a>
             </div-->
 
             <div class="clearfix"></div>
 
             <%  String nic=(String) session.getAttribute( "Admin" ); 
-            Connection cons;
-            cons= DBConnection.getConnection();
-        
-            UserServiceImpl canserv1=new UserServiceImpl();
-               
-             User can = canserv1.getUserDetails(nic);
-        
-        
-            JobServiceImpl canserv2=new JobServiceImpl();
-               
-            int wso2= canserv2.getJobCount("WSO2@WSO2.com");
-            int dialog= canserv2.getJobCount("dialog@dialog.lk");
-            int codegen= canserv2.getJobCount("CodeGen@CodeGen.com");
-            int x99= canserv2.getJobCount("99x@99x.com");
-            int lseg= canserv2.getJobCount("LSEG@lk.LSEG.com");
-            
-            
-            int tot = wso2+dialog+codegen+x99+lseg;
-            float w,d,c,x,l;
-            
-            w=(wso2/(float)tot)*100;
-            d=(dialog/(float)tot)*100;
-            c=(codegen/(float)tot)*100;
-            x=(x99/(float)tot)*100;
-            l=(lseg/(float)tot)*100;
-            
-            
-          
-            
-            %>
+		Connection cons;
+		cons= DBConnection.getConnection();
+
+		UserServiceImpl canserv1=new UserServiceImpl();
+		   
+		 User can = canserv1.getUserDetails(nic);
+
+
+		JobServiceImpl canserv2=new JobServiceImpl();
+		   
+		int wso2= canserv2.getJobCount("WSO2@WSO2.com");
+		int dialog= canserv2.getJobCount("dialog@dialog.lk");
+		int codegen= canserv2.getJobCount("CodeGen@CodeGen.com");
+		int x99= canserv2.getJobCount("99x@99x.com");
+		int lseg= canserv2.getJobCount("LSEG@lk.LSEG.com");
+		
+		
+		int tot = wso2+dialog+codegen+x99+lseg;
+		float w,d,c,x,l;
+		
+		w=(wso2/(float)tot)*100;
+		d=(dialog/(float)tot)*100;
+		c=(codegen/(float)tot)*100;
+		x=(x99/(float)tot)*100;
+		l=(lseg/(float)tot)*100;
+		
+		
+	
+		
+		%>
             <!-- menu profile quick info -->
             <div class="profile clearfix">
               <div class="profile_pic">
@@ -186,61 +186,61 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="dashboard.jsp"><i class="fa fa-home"></i> Home <!--span class="fa fa-chevron-down"></span--></a>
+                  <li><a href="dashboard.html"><i class="fa fa-home"></i> Home <!--span class="fa fa-chevron-down"></span--></a>
                     <!--ul class="nav child_menu">
-                      <li><a href="dashboard.jsp">Dashboard</a></li>
-                      <li><a href="index2.jsp">Dashboard2</a></li>
-                      <li><a href="index3.jsp">Dashboard3</a></li>
+                      <li><a href="dashboard.html">Dashboard</a></li>
+                      <li><a href="index2.html">Dashboard2</a></li>
+                      <li><a href="index3.html">Dashboard3</a></li>
                     </ul-->
                   </li>
-                  <li><a href="whatsnew.jsp"><i class="fa fa-user"></i> What's New </a>
+                  <li><a href="whatsnew.html"><i class="fa fa-user"></i> What's New </a>
                   </li>
                   <li><a><i class="fa fa-trophy"></i>Skills & Achievements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="general_elements.jsp">Skills</a></li>
-                      
-                      <!--li><a href="typography.jsp">Typography</a></li>
-                      <li><a href="icons.jsp">Icons</a></li>
-                      <li><a href="glyphicons.jsp">Glyphicons</a></li>
-                      <li><a href="widgets.jsp">Widgets</a></li>
-                      <li><a href="invoice.jsp">Invoice</a></li-->
+                      <li><a href="general_elements.html">Skills</a></li>
+                      <li><a href="media_gallery.html">Achievements</a></li>
+                      <!--li><a href="typography.html">Typography</a></li>
+                      <li><a href="icons.html">Icons</a></li>
+                      <li><a href="glyphicons.html">Glyphicons</a></li>
+                      <li><a href="widgets.html">Widgets</a></li>
+                      <li><a href="invoice.html">Invoice</a></li-->
                     </ul>
                   </li>
                   <li><a><i class="fa fa-file-text"></i> My CV <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="mycv.jsp">View CV</a></li>
+                      <li><a href="mycv.html">View CV</a></li>
                       <li><a>Edit CV</a></li>
                       
-                      <!--li><a href="form_wizards.jsp">Form Wizard</a></li>
-                      <li><a href="form_upload.jsp">Form Upload</a></li>
-                      <li><a href="form_advanced.jsp">Advanced Components</a></li>
-                      <li><a href="form_buttons.jsp">Form Buttons</a></li-->
+                      <!--li><a href="form_wizards.html">Form Wizard</a></li>
+                      <li><a href="form_upload.html">Form Upload</a></li>
+                      <li><a href="form_advanced.html">Advanced Components</a></li>
+                      <li><a href="form_buttons.html">Form Buttons</a></li-->
                     </ul>
                   </li>
                   <li><a><i class="fa fa-user"></i> My Profile <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <!--li><a href="tables.jsp">Tables</a></li>
-                      <li><a href="tables_dynamic.jsp">Table Dynamic</a></li-->
-                        <li><a href="profile.jsp">Profile</a></li>
-                        <li><a href="form.jsp">Edit Profile</a></li>
-                        <li><a href="projects.jsp">My Jobs</a></li>
-                        <li><a href="inbox.jsp">Inbox</a></li>
-                       <li><a href="calendar.jsp">Calendar</a></li>
+                      <!--li><a href="tables.html">Tables</a></li>
+                      <li><a href="tables_dynamic.html">Table Dynamic</a></li-->
+                        <li><a href="profile.html">Profile</a></li>
+                        <li><a href="form.html">Edit Profile</a></li>
+                        <li><a href="projects.html">My Jobs</a></li>
+                        <li><a href="inbox.html">Inbox</a></li>
+                       <li><a href="calendar.html">Calendar</a></li>
                     </ul>
                   </li>
                   <!--li><a><i class="fa fa-bar-chart-o"></i> Data Presentation <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="chartjs.jsp">Chart JS</a></li>
-                      <li><a href="chartjs2.jsp">Chart JS2</a></li>
-                      <li><a href="morisjs.jsp">Moris JS</a></li>
-                      <li><a href="echarts.jsp">ECharts</a></li>
-                      <li><a href="other_charts.jsp">Other Charts</a></li>
+                      <li><a href="chartjs.html">Chart JS</a></li>
+                      <li><a href="chartjs2.html">Chart JS2</a></li>
+                      <li><a href="morisjs.html">Moris JS</a></li>
+                      <li><a href="echarts.html">ECharts</a></li>
+                      <li><a href="other_charts.html">Other Charts</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-clone"></i>Layouts <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="fixed_sidebar.jsp">Fixed Sidebar</a></li>
-                      <li><a href="fixed_footer.jsp">Fixed Footer</a></li>
+                      <li><a href="fixed_sidebar.html">Fixed Sidebar</a></li>
+                      <li><a href="fixed_footer.html">Fixed Footer</a></li>
                     </ul>
                   </li>
                 </ul>
@@ -250,21 +250,21 @@
                 <ul class="nav side-menu">
                   <li><a><i class="fa fa-bug"></i> Additional Pages <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="e_commerce.jsp">E-commerce</a></li>
+                      <li><a href="e_commerce.html">E-commerce</a></li>
                       
-                      <li><a href="project_detail.jsp">Project Detail</a></li>
-                      <li><a href="contacts.jsp">Contacts</a></li>
+                      <li><a href="project_detail.html">Project Detail</a></li>
+                      <li><a href="contacts.html">Contacts</a></li>
                       
                     </ul>
                   </li>
                   <li><a><i class="fa fa-windows"></i> Extras <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="page_403.jsp">403 Error</a></li>
-                      <li><a href="page_404.jsp">404 Error</a></li>
-                      <li><a href="page_500.jsp">500 Error</a></li>
-                      <li><a href="plain_page.jsp">Plain Page</a></li>
-                      <li><a href="login.jsp">Login Page</a></li>
-                      <li><a href="pricing_tables.jsp">Pricing Tables</a></li>
+                      <li><a href="page_403.html">403 Error</a></li>
+                      <li><a href="page_404.html">404 Error</a></li>
+                      <li><a href="page_500.html">500 Error</a></li>
+                      <li><a href="plain_page.html">Plain Page</a></li>
+                      <li><a href="login.html">Login Page</a></li>
+                      <li><a href="pricing_tables.html">Pricing Tables</a></li>
                     </ul>
                   </li>
                   <li><a><i class="fa fa-sitemap"></i> Multilevel Menu <span class="fa fa-chevron-down"></span></a>
@@ -272,7 +272,7 @@
                         <li><a href="#level1_1">Level One</a>
                         <li><a>Level One<span class="fa fa-chevron-down"></span></a>
                           <ul class="nav child_menu">
-                            <li class="sub_menu"><a href="level2.jsp">Level Two</a>
+                            <li class="sub_menu"><a href="level2.html">Level Two</a>
                             </li>
                             <li><a href="#level2_1">Level Two</a>
                             </li>
@@ -302,7 +302,7 @@
               <a data-toggle="tooltip" data-placement="top" title="Lock">
                 <span class="glyphicon glyphicon-eye-close" aria-hidden="true"></span>
               </a-->
-              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.jsp" >
+              <a data-toggle="tooltip" data-placement="top" title="Logout" href="login.html" >
                 <span class="glyphicon glyphicon-off" aria-hidden="true"></span>
               </a>
             </div>
@@ -333,7 +333,7 @@
                       </a>
                     </li>
                     <li><a href="javascript:;">Help</a></li>
-                    <li><a href="login.jsp"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
+                    <li><a href="login.html"><i class="fa fa-sign-out pull-right"></i> Log Out</a></li>
                   </ul>
                 </li>
 
