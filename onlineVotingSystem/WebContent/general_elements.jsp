@@ -186,7 +186,7 @@
               <div class="menu_section">
                 <h3>General</h3>
                 <ul class="nav side-menu">
-                  <li><a href="dashboard.jsp"><i class="fa fa-home"></i> Home <!--span class="fa fa-chevron-down"></span--></a>
+                  <li><a href="UserDashBoard.jsp"><i class="fa fa-home"></i> Home <!--span class="fa fa-chevron-down"></span--></a>
                     <!--ul class="nav child_menu">
                       <li><a href="dashboard.jsp">Dashboard</a></li>
                       <li><a href="index2.jsp">Dashboard2</a></li>

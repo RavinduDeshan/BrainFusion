@@ -13,14 +13,7 @@
 <%@ page import ="java.sql.Statement"%>
 <!DOCTYPE html>
 <html lang="en">
-
   <head>
-      <%
-      if(session.getAttribute("type") !="1") {
-          response.sendRedirect("index.jsp");
-      }
-      
-      %>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <!-- Meta, title, CSS, favicons, etc. -->
     <meta charset="utf-8">
@@ -58,7 +51,7 @@
               <div class="divTable blueTable">
                   <div class="divTableBody">
                   <div class="divTableRow">
-                  <div class="divTableCell"><a class="navbar1-brand" href="index.jsp"><img src="HomeAssets/images/Career Master.png" height="56px">Career Master</a>
+                  <div class="divTableCell"><a class="navbar1-brand" href="index.jsp">Career Master</a>
                     <button class="navbar1-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="oi oi-menu"></span> Menu
                     </button>
@@ -67,11 +60,13 @@
                     <div class="divTableCel2">
                       <div class="collapse navbar1-collapse" id="ftco-nav">
                         <ul class="navbar1-nav ml-auto">
-                            <li class="nav-item "><a href="index.jsp" class="nav-link">Home</a></li>
-                            <li class="nav-item"><a href="browseJobs.jsp" class="nav-link">Browse Jobs</a></li>
-                            <li class="nav-item"><a href="candidates.jsp" class="nav-link">Experts</a></li>
-                            <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
-                            <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
+                          <li class="nav-item active"><a href="UserDashBoard.jsp" class="nav-link">Home</a></li>
+                          <li class="nav-item"><a href="browsejobs.jsp" class="nav-link">Browse Jobs</a></li>
+                          <li class="nav-item"><a href="candidates.jsp" class="nav-link">Experts</a></li>
+                          <li class="nav-item"><a href="blog.jsp" class="nav-link">Blog</a></li>
+                          <li class="nav-item"><a href="contact.jsp" class="nav-link">Contact</a></li>
+                          <li class="nav-item cta mr-md-1"><a href="new-post.jsp" class="nav-link">Post a Job</a></li><li style="padding-left: 10px"></li>
+                          <li class="nav-item cta cta-colored"><a href="job-post.jsp" class="nav-link">Want a Job</a></li>
               
                         </ul>
                       </div>
@@ -95,37 +90,6 @@
             </div-->
 
             <div class="clearfix"></div>
-            <%  String nic=(String) session.getAttribute( "Admin" ); 
-		Connection cons;
-		cons= DBConnection.getConnection();
-
-		UserServiceImpl canserv1=new UserServiceImpl();
-		   
-		 User can = canserv1.getUserDetails(nic);
-
-
-		JobServiceImpl canserv2=new JobServiceImpl();
-		   
-		int wso2= canserv2.getJobCount("WSO2@WSO2.com");
-		int dialog= canserv2.getJobCount("dialog@dialog.lk");
-		int codegen= canserv2.getJobCount("CodeGen@CodeGen.com");
-		int x99= canserv2.getJobCount("99x@99x.com");
-		int lseg= canserv2.getJobCount("LSEG@lk.LSEG.com");
-		
-		
-		int tot = wso2+dialog+codegen+x99+lseg;
-		float w,d,c,x,l;
-		
-		w=(wso2/(float)tot)*100;
-		d=(dialog/(float)tot)*100;
-		c=(codegen/(float)tot)*100;
-		x=(x99/(float)tot)*100;
-		l=(lseg/(float)tot)*100;
-		
-		
-	
-		
-		%>
 
             <!-- menu profile quick info -->
             <div class="profile clearfix">
@@ -133,9 +97,9 @@
                 <img src="HomeAssets/images/img.jpg" alt="..." class="img-circle profile_img">
               </div>
               <div class="profile_info">
-                  <span>Welcome,</span>
-                  <h2><%=can.getiName()%></h2>
-                </div>
+                <span>Welcome,</span>
+                <h2>John Doe</h2>
+              </div>
             </div>
             <!-- /menu profile quick info -->
 
@@ -153,12 +117,10 @@
                       <li><a href="index3.jsp">Dashboard3</a></li>
                     </ul-->
                   </li>
-                  <li><a href="whatsnew.jsp"><i class="fa fa-user"></i> What's New </a>
-                  </li>
                   <li><a><i class="fa fa-trophy"></i>Skills & Achievements <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
                       <li><a href="general_elements.jsp">Skills</a></li>
-                      
+                      <li><a href="media_gallery.jsp">Achievements</a></li>
                       <!--li><a href="typography.jsp">Typography</a></li>
                       <li><a href="icons.jsp">Icons</a></li>
                       <li><a href="glyphicons.jsp">Glyphicons</a></li>
@@ -168,7 +130,7 @@
                   </li>
                   <li><a><i class="fa fa-file-text"></i> My CV <span class="fa fa-chevron-down"></span></a>
                     <ul class="nav child_menu">
-                      <li><a href="mycv.jsp">View CV</a></li>
+                      <li><a>View CV</a></li>
                       <li><a>Edit CV</a></li>
                       
                       <!--li><a href="form_wizards.jsp">Form Wizard</a></li>
@@ -470,29 +432,31 @@
 
             <div class="row">
                 
-              <div class="col-md-6">
+              <div class="col-md-12">
                   <div class="x_panel">
+                    
                   <div class="x_title">
-                    <h2>Personal Details<small> Generate CV</small></h2>
+                    <h2>Account Details</h2>
                     
                     <div class="clearfix"></div>
                   </div>
-                  <div class="x_content" style="float:none;">
+                  <div style="margin-left: 25%;margin-right: 25%;">
+                  <div class="x_content" style="float:none;" >
                     <br />
                     <form class="form-horizontal form-label-left input_mask">
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="First Name">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess2" placeholder="Full Name" required>
                         <span class="fa fa-user form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Last Name">
+                        <input type="text" class="form-control" id="inputSuccess3" placeholder="Name with Initials" required>
                         <span class="fa fa-user form-control-feedback right" aria-hidden="true"></span>
                       </div>
 
                       <div class="col-md-6 col-sm-6 col-xs-12 form-group has-feedback">
-                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email">
+                        <input type="text" class="form-control has-feedback-left" id="inputSuccess4" placeholder="Email" required>
                         <span class="fa fa-envelope form-control-feedback left" aria-hidden="true"></span>
                       </div>
 
@@ -502,10 +466,10 @@
                       </div>
           
                       <div class="form-group">
-                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Date Of Birth <span class="required">*</span>
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">NIC Number <span class="required">*</span>
                           </label>
                           <div class="col-md-9 col-sm-9 col-xs-12">
-                            <textarea class="form-control" rows="3" placeholder="Date Of Birth"></textarea>
+                            <textarea class="form-control" rows="3" placeholder="NIC Number" required></textarea>
                           </div>
                         </div>
 
@@ -564,14 +528,14 @@
                             </select>
                           </div>
                         </div>
-                        <div class="form-group">
+                        <!--div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">Student while working</label> 
                           <div class="col-md-9 col-sm-9 col-xs-12">
                               <label>
                                 <input type="checkbox" class="js-switch" /> 
                               </label>
                             </div>
-                        </div>
+                        </div-->
                         <div class="form-group">
                             <label class="control-label col-md-3 col-sm-3 col-xs-12">University/Institute</label>
                             <div class="col-md-9 col-sm-9 col-xs-12">
@@ -579,23 +543,24 @@
                             </div>
                           </div>
                           <div class="form-group">
-                              <label class="control-label col-md-3 col-sm-3 col-xs-12">Type of Degree</label>
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12">Company</label>
                               <div class="col-md-9 col-sm-9 col-xs-12">
                                 <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
                               </div>
                             </div>
                           <div class="form-group">
-                              <label class="control-label col-md-3 col-sm-3 col-xs-12">Company Name </label>
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Password <span class="required">*</span></label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                              <input type="password" name="country" id="autocomplete-custom-append" class="form-control col-md-10" required/>
+                            </div>
+                          </div>
+                          <div class="form-group">
+                              <label class="control-label col-md-3 col-sm-3 col-xs-12">Confirm password <span class="required">*</span> </label>
                               <div class="col-md-9 col-sm-9 col-xs-12">
-                                <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
+                                <input type="password" name="country" id="autocomplete-custom-append" class="form-control col-md-10" required/>
                               </div>
                             </div>
-                            <div class="form-group">
-                                <label class="control-label col-md-3 col-sm-3 col-xs-12">Designation</label>
-                                <div class="col-md-9 col-sm-9 col-xs-12">
-                                  <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
-                                </div>
-                              </div>
+                            
                         <!--div class="form-group">
                           <label class="control-label col-md-3 col-sm-3 col-xs-12">Select Custom</label>
                           <div class="col-md-9 col-sm-9 col-xs-12">
@@ -631,7 +596,7 @@
                             </select>
                           </div>
                         </div-->
-                        <div class="form-group">
+                        <!--div class="form-group">
                           <label class="control-label col-md-3 col-sm-3 col-xs-12">Location</label>
                           <div class="col-md-9 col-sm-9 col-xs-12">
                             <select class="select2_group form-control">
@@ -800,7 +765,7 @@
                               </label>
                             </div>
                           </div>
-                        </div-->
+                        </div>
 
                         <div class="form-group">
                             
@@ -820,7 +785,7 @@
                         <br />
                         </p>
                           </div>
-                        </div>
+                        </div-->
 
 
                         <!--div class="form-group">
@@ -847,7 +812,7 @@
                               </label>
                             </div>
                           </div>
-                        </div-->
+                        </div>
 
                         <div class="form-group">
                         <label for="heard" class="control-label col-md-3 col-sm-3 col-xs-12">Heard us by *:</label>
@@ -859,7 +824,22 @@
                             <option value="mouth">Word of mouth</option>
                           </select>
                         </div>
-                        </div>  
+                        </div-->  
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3 col-sm-3 col-xs-12">Personal Address
+                            </label>
+                            <div class="col-md-9 col-sm-9 col-xs-12">
+                              <textarea class="form-control" rows="3" placeholder="Address"></textarea>
+                            </div>
+                          </div>
+                        <div class="form-group">
+                          <label class="control-label col-md-3 col-sm-3 col-xs-12">Little description about you <span class="required">*</span>
+                          </label>
+                          <div class="col-md-9 col-sm-9 col-xs-12">
+                            <textarea class="form-control" rows="3" placeholder="Your thoughts" required></textarea>
+                          </div>
+                        </div>
 
                         <div class="ln_solid"></div>
                         <div class="form-group">
@@ -980,10 +960,10 @@
                   </div>
                 </div-->
 
-
+                  </div>
               </div>
 
-              <div class="col-md-6 col-xs-12">
+              <!--div class="col-md-6 col-xs-12">
                 <div class="x_panel">
                   <div class="x_title">
                     <h2>Account Details <small>Change username, E-MAIL & Password</small></h2>
@@ -994,7 +974,7 @@
                     <br />
                     <form class="form-horizontal form-label-left">
 
-                      <!--div class="form-group">
+                      <div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Default Input</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">
                           <input type="text" class="form-control" placeholder="Default Input">
@@ -1018,7 +998,7 @@
                         <div class="col-md-9 col-sm-9 col-xs-12">
                           <textarea class="form-control" rows="3" placeholder="Date Of Birth"></textarea>
                         </div>
-                      </div-->
+                      </div>
                       <div class="form-group">
                           <label class="control-label col-md-3 col-sm-3 col-xs-12">Username</label>
                           <div class="col-md-9 col-sm-9 col-xs-12">
@@ -1049,6 +1029,8 @@
                             <input type="text" name="country" id="autocomplete-custom-append" class="form-control col-md-10"/>
                           </div>
                         </div>
+
+                        
                       <!--div class="form-group">
                         <label class="control-label col-md-3 col-sm-3 col-xs-12">Select</label>
                         <div class="col-md-9 col-sm-9 col-xs-12">

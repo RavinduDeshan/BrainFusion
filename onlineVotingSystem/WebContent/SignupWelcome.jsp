@@ -53,7 +53,7 @@
         </h1>
         <h2 class="masthead-subheading mb-0">Sign Up As</h2>
         <a href="addJobHost.jsp" class="btn btn-primary btn-xl rounded-pill mt-5" id="jobh" onmouseover="document.getElementById('extracon1').style.display = 'block';" onmouseout="document.getElementById('extracon1').style.display = 'none';">Job Host</a>
-        <a href="addUser.jsp" class="btn btn-primary btn-xl rounded-pill mt-5" id="cs" onmouseover="document.getElementById('extracon2').style.display = 'block';" onmouseout="document.getElementById('extracon2').style.display = 'none';">Career Seeker</a>
+        <a href="addUser.jsp" class="btn btn-primary btn-xl rounded-pill mt-5" id="cs" onmouseover="document.getElementById('extracon2').style.display = 'block';" onmouseout="document.getElementById('extracon2').style.display = 'none';">Skill Seeker</a>
        
         
       </div>
