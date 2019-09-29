@@ -1214,7 +1214,7 @@ padding:-55% 0%;
     <!--Copyright-->
     <div class="footer-copyright py-3">
       © 2019 Copyright:
-      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> SLIIT </a>
+      <a href="https://mdbootstrap.com/education/bootstrap/" target="_blank"> |Career Master </a>
     </div>
     <!--/.Copyright-->
 

@@ -53,7 +53,7 @@
         </h1>
         <h2 class="masthead-subheading mb-0">Login As</h2>
         <a href="JobHostLogin.jsp" class="btn btn-primary btn-xl rounded-pill mt-5" id="jobh" onmouseover="document.getElementById('extracon1').style.display = 'block';" onmouseout="document.getElementById('extracon1').style.display = 'none';">Job Host</a>
-        <a href="UserLogin.jsp" class="btn btn-primary btn-xl rounded-pill mt-5" id="cs" onmouseover="document.getElementById('extracon2').style.display = 'block';" onmouseout="document.getElementById('extracon2').style.display = 'none';">Career Seeker</a>
+        <a href="UserLogin.jsp" class="btn btn-primary btn-xl rounded-pill mt-5" id="cs" onmouseover="document.getElementById('extracon2').style.display = 'block';" onmouseout="document.getElementById('extracon2').style.display = 'none';">Skill Seeker</a>
        
         
       </div>
@@ -61,8 +61,8 @@
       <br>
       <br>
       <br>
-      <div id="extracon1" style="display: none;">If you are a  Career Seeker Log In Here</div>
-      <div id="extracon2" style="display: none;">If you are a Job Host Company Login Here</div>
+      <div id="extracon2" style="display: none;">If you are a  Career Seeker Log In Here</div>
+      <div id="extracon1" style="display: none;">If you are a Job Host Company Login Here</div>
     </div>
     
     <br>

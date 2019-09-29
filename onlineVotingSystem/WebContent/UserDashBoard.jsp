@@ -7,6 +7,7 @@
     
     <%@ page import="com.onvs.util.DBConnection"%>
 <%@ page import ="java.sql.Connection"%>
+
     
 <%@ page import ="java.sql.ResultSet"%>
     
@@ -156,11 +157,11 @@
 		int tot = wso2+dialog+codegen+x99+lseg;
 		float w,d,c,x,l;
 		
-		w=(wso2/(float)tot)*100;
-		d=(dialog/(float)tot)*100;
-		c=(codegen/(float)tot)*100;
-		x=(x99/(float)tot)*100;
-		l=(lseg/(float)tot)*100;
+		w=Math.round((wso2/(float)tot)*100);
+		d=Math.round((dialog/(float)tot)*100);
+		c=Math.round((codegen/(float)tot)*100);
+		x=Math.round((x99/(float)tot)*100);
+		l=Math.round((lseg/(float)tot)*100);
 		
 		
 	
@@ -721,28 +722,29 @@
                     <div class="x_panel">
                   
                       <div class="x_title">
-                        <h2>Top Comanies Hiring Now</h2>
+                        <h2>Top Companies Hiring Now</h2>
+		
                         <div class="clearfix"></div>
                       </div>
-                      <h5><img src="HomeAssets/images/wso2.png" height="26px" width="60px"></h5>
+                      <h5><img src="HomeAssets/images/WSO2.png" height="26px" width="60px"></h5>
                       <div class="progress">
-                        <div class="progress-bar progress-bar-warning" data-transitiongoal="80"><font size="3px">80%</font></div>
+                        <div class="progress-bar progress-bar-warning" data-transitiongoal="<%=w%>"><font size="3px"><%=w%>%</font></div>
                       </div>
                       <h5><img src="HomeAssets/images/dialog.png" height="26px" width="50px"></h5>
                       <div class="progress">
-                        <div class="progress-bar progress-bar-danger" data-transitiongoal="60"><font size="3px">60%</font></div>
+                        <div class="progress-bar progress-bar-danger" data-transitiongoal="<%=d%>"><font size="3px"><%=d%>%</font></div>
                       </div>
                       <h5><img src="HomeAssets/images/codegen.jpg" height="26px" width="86px"></h5>
                       <div class="progress">
-                        <div class="progress-bar progress-bar-info" data-transitiongoal="65"><font size="3px">65%</font></div>
+                        <div class="progress-bar progress-bar-info" data-transitiongoal="<%=c%>"><font size="3px"><%=c%>%</font></div>
                       </div>
                       <h5><img src="HomeAssets/images/99x.png" height="26px" width="90px"></h5>
                       <div class="progress">
-                        <div class="progress-bar progress-bar-danger" data-transitiongoal="76"><font size="3px">76%</font></div>
+                        <div class="progress-bar progress-bar-danger" data-transitiongoal="<%=x%>"><font size="3px"><%=x%>%</font></div>
                       </div>
                       <h5><img src="HomeAssets/images/lseg.png" height="26px" width="100px"></h5>
                       <div class="progress">
-                        <div class="progress-bar progress-bar-warning" data-transitiongoal="60"><font size="3px">60%</font></div>
+                        <div class="progress-bar progress-bar-warning" data-transitiongoal="<%=l%>"><font size="3px"><%=l%>%</font></div>
                       </div>
                     </div>
                   </div>
