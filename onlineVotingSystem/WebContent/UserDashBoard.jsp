@@ -198,7 +198,7 @@
                       <li><a><i class="fa fa-trophy"></i>Skills & Achievements <span class="fa fa-chevron-down"></span></a>
                         <ul class="nav child_menu">
                           <li><a href="general_elements.jsp">Skills</a></li>
-                          <li><a href="media_gallery.jsp">Achievements</a></li>
+                          
                           <!--li><a href="typography.html">Typography</a></li>
                           <li><a href="icons.html">Icons</a></li>
                           <li><a href="glyphicons.html">Glyphicons</a></li>
