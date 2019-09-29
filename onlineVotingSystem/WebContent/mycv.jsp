@@ -55,7 +55,7 @@
               <div class="divTable blueTable">
                   <div class="divTableBody">
                   <div class="divTableRow">
-                  <div class="divTableCell"><a class="navbar1-brand" href="index.html"><img src="HomeAssets/images/Career Master.png" height="56px">Career Master</a>
+                    <a class="navbar1-brand" href="index.jsp"><img src="HomeAssets/images/Career Master Vert.png" height="56px"></a>
                     <button class="navbar1-toggler" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
                       <span class="oi oi-menu"></span> Menu
                     </button>
